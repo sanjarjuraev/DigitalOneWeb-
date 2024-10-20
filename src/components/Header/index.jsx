@@ -140,7 +140,7 @@ const Header = () => {
             </button> */}
 
             {/* Call to Action */}
-            <button className='hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg'>
+            <button className='btn-cubic hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg hover:rounded-lg'>
               Get in Touch
             </button>
 

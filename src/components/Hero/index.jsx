@@ -59,7 +59,17 @@ const Hero = () => {
               />
             </div>
           </div>{' '}
-          <div className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-red-500 bg-opacity-60'>
+          <div
+            className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-black bg-opacity-60 '
+            style={{
+              borderTopLeftRadius: '20px',
+              borderBottomRightRadius: '20px',
+              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
             <h2 className='text-2xl md:text-4xl font-bold mb-4 text-center md:text-left'>
               Slide 1: Captivating Title Here
             </h2>
@@ -67,7 +77,10 @@ const Hero = () => {
               This is some sample text for the first slide. You can add any
               content here to make it informative and attractive.
             </p>
-            <button className='bg-red-500 hover:bg-red-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full transition duration-300'>
+            <button
+              className='btn-cubic px-4 md:px-6 py-2 md:py-3 rounded-full hover:rounded-full transition ease-in-out duration-500
+'
+            >
               Get in Touch
             </button>
           </div>
@@ -93,7 +106,17 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-red-500 bg-opacity-60'>
+          <div
+            className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-black bg-opacity-60 '
+            style={{
+              borderTopLeftRadius: '20px',
+              borderBottomRightRadius: '20px',
+              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
             <h2 className='text-2xl md:text-4xl font-bold mb-4 text-center md:text-left'>
               Slide 1: Captivating Title Here
             </h2>
@@ -101,7 +124,10 @@ const Hero = () => {
               This is some sample text for the first slide. You can add any
               content here to make it informative and attractive.
             </p>
-            <button className='bg-red-500 hover:bg-red-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full transition duration-300'>
+            <button
+              className='btn-cubic px-4 md:px-6 py-2 md:py-3 rounded-full hover:rounded-full transition ease-in-out duration-500
+'
+            >
               Get in Touch
             </button>
           </div>
@@ -125,7 +151,17 @@ const Hero = () => {
               />
             </div>
           </div>{' '}
-          <div className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-red-500 bg-opacity-60'>
+          <div
+            className='absolute w-full max-w-lg p-5 md:p-10 text-left animate-fadeInLeft flex flex-col items-center md:items-start justify-center left-0 md:left-36 z-20 bg-black bg-opacity-60 '
+            style={{
+              borderTopLeftRadius: '20px',
+              borderBottomRightRadius: '20px',
+              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
             <h2 className='text-2xl md:text-4xl font-bold mb-4 text-center md:text-left'>
               Slide 1: Captivating Title Here
             </h2>
@@ -133,7 +169,10 @@ const Hero = () => {
               This is some sample text for the first slide. You can add any
               content here to make it informative and attractive.
             </p>
-            <button className='bg-red-500 hover:bg-red-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full transition duration-300'>
+            <button
+              className='btn-cubic px-4 md:px-6 py-2 md:py-3 rounded-full hover:rounded-full transition ease-in-out duration-500
+'
+            >
               Get in Touch
             </button>
           </div>
@@ -149,20 +188,17 @@ const Hero = () => {
       </Swiper>
 
       {/* Navigation Buttons */}
-      <div className='swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 text-white z-20'>
-        <i className='fas fa-chevron-left text-2xl'></i>
-      </div>
-      <div className='swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 text-white z-20'>
-        <i className='fas fa-chevron-right text-2xl'></i>
+      <div className='absolute right-2 bottom-20 w-20'>
+        <div className='swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20'>
+          <i className='fas fa-chevron-right text-2xl hover:text-red-600'></i>
+        </div>
+        <div className='swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20'>
+          <i className='fas fa-chevron-left text-2xl hover:text-red-600'></i>
+        </div>
       </div>
 
       {/* Pagination Dots */}
-      <div className='swiper-pagination absolute bottom-4 right-4 z-20'></div>
-
-      {/* Autoplay Progress Bar */}
-      <div className='autoplay-progress absolute bottom-4 left-4 z-20 w-32 h-1 bg-white bg-opacity-30'>
-        <span className='block h-full bg-red-500'></span>
-      </div>
+      <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
     </section>
   )
 }
