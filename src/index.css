@@ -17,6 +17,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
 }
 
 body {

@@ -198,7 +198,9 @@ const Hero = () => {
       </div>
 
       {/* Pagination Dots */}
-      <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
+      <div className='absolute right-2 bottom-28 w-20'>
+        <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
+      </div>
     </section>
   )
 }

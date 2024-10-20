@@ -1,0 +1,63 @@
+/** @format */
+@keyframes movingX {
+  0% {
+    transform: translateX(0); /* Start at the original position */
+  }
+  50% {
+    transform: translateX(80%); /* Move to 80% of the container width */
+  }
+  100% {
+    transform: translateX(0); /* Return to the start */
+  }
+}
+.movingX {
+  animation: movingX 10s linear infinite; /* Adjust animation timing for smaller screens */
+}
+@keyframes movingY {
+  0% {
+    transform: translateY(0); /* Start at the original position */
+  }
+  50% {
+    transform: translateY(100%); /* Move to 80% of the container width */
+  }
+  100% {
+    transform: translateY(0); /* Return to the start */
+  }
+}
+.movingY {
+  animation: movingY 8s linear infinite; /* Adjust animation timing for smaller screens */
+}
+/* Mobile Devices - Small (up to 480px) */
+@media (max-width: 480px) {
+  .about-us {
+    padding-top: var(--section-space-mobile); /* Apply smaller section space */
+  }
+}
+
+/* Tablets and Small Laptops (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .about-us {
+    padding-top: var(--section-space-mobile);
+  }
+}
+
+/* Medium to Large Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-us {
+    padding-top: var(--section-space-mobile);
+  }
+}
+
+/* Desktops and Large Screens (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .about-us {
+    padding-top: var(--section-space);
+  }
+}
+
+/* Extra Large Desktops (1441px and above) */
+@media (min-width: 1441px) {
+  .about-us {
+    padding-top: var(--section-space);
+  }
+}

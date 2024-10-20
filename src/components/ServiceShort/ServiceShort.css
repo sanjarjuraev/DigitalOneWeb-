@@ -1,0 +1,268 @@
+/** @format */
+
+.card {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 0 36px;
+  width: 280px;
+  height: 285px;
+  background-color: #fff;
+  box-shadow: 0 4px 25px 0 rgba(56, 75, 255, 0.08);
+  border-radius: 8px;
+  transition: 1s linear;
+  overflow: hidden; /* Ensure the mask does not overflow */
+}
+
+.card-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0; /* Initially 0 height */
+  background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  background-image: url('/src/assets/bg-images/service-card.png'); /* Your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply; /* Blend the red color with the image */
+  z-index: 1; /* Ensure it's below the content */
+  transition: height 0.5s ease-in-out; /* Smooth transition */
+  border-radius: 8px; /* Match the card's border radius */
+}
+
+.card:hover .card-mask {
+  height: 100%; /* Full height on hover */
+}
+.card:hover p {
+  color: White;
+}
+
+h3,
+p {
+  position: relative;
+  z-index: 10; /* Ensure content is above the mask */
+}
+
+.icon-container ::before {
+  position: absolute;
+  z-index: 20;
+
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 80px;
+  height: 80.638px;
+  /* background-color: var(--theme-color); */
+  opacity: 0.1;
+}
+.icon-container {
+  width: 80px;
+  height: 80px;
+  background: #ffb8b8;
+  -webkit-clip-path: polygon(
+    43px 80.5px,
+    43px 80.5px,
+    39.53360194px 80.6138793px,
+    35.93715952px 80.1950024px,
+    32.27225038px 79.3019371px,
+    28.60045216px 77.9932512px,
+    24.9833425px 76.3275125px,
+    21.48249904px 74.3632888px,
+    18.15949942px 72.1591479px,
+    15.07592128px 69.7736576px,
+    12.29334226px 67.2653857px,
+    9.87334px 64.6929px,
+    9.87334px 64.6929px,
+    7.9367128753px 62.2494616px,
+    6.2104916824px 59.6854208px,
+    4.6949916931px 57.0120192px,
+    3.3905281792px 54.2404984px,
+    2.2974164125px 51.3821px,
+    1.4159716648px 48.4480656px,
+    0.7465092079px 45.4496368px,
+    0.2893443136px 42.3980552px,
+    0.0447922537px 39.3045624px,
+    0.0131683px 36.1804px,
+    0.0131683px 36.1804px,
+    0.1857139617px 33.13325371px,
+    0.5595666176px 30.11371768px,
+    1.1381176039px 27.13886617px,
+    1.9247582568px 24.22577344px,
+    2.9228799125px 21.39151375px,
+    4.1358739072px 18.65316136px,
+    5.5671315771px 16.02779053px,
+    7.2200442584px 13.53247552px,
+    9.0980032873px 11.18429059px,
+    11.2044px 9.00031px,
+    11.2044px 9.00031px,
+    13.4497356px 7.0972821754px,
+    15.8464968px 5.4603242994px,
+    18.3770652px 4.0732687683px,
+    21.0238224px 2.9199479789px,
+    23.76915px 1.9841943275px,
+    26.5954296px 1.2498402107px,
+    29.4850428px 0.7007180251px,
+    32.4203712px 0.320660167px,
+    35.3837964px 0.0934990332px,
+    38.3577px 0.00306702px,
+    38.3577px 0.00306702px,
+    41.363953px 0.0404444904px,
+    44.35772px 0.2181352006px,
+    47.323653px 0.5511659215px,
+    50.246404px 1.0545634235px,
+    53.110625px 1.7433544775px,
+    55.900968px 2.6325658541px,
+    58.602085px 3.7372243239px,
+    61.198628px 5.0723566578px,
+    63.675249px 6.6529896262px,
+    66.0166px 8.49415px,
+    66.0166px 8.49415px,
+    68.3999054px 10.69325995px,
+    70.6702992px 13.0542976px,
+    72.7870678px 15.56399965px,
+    74.7094976px 18.2091028px,
+    76.396875px 20.97634375px,
+    77.8084864px 23.8524592px,
+    78.9036182px 26.82418585px,
+    79.6415568px 29.8782604px,
+    79.9815886px 33.00141955px,
+    79.883px 36.1804px,
+    79.883px 36.1804px,
+    79.5103764px 39.0453677px,
+    79.0147072px 41.5826016px,
+    78.3824948px 43.8539179px,
+    77.6002416px 45.9211328px,
+    76.65445px 47.8460625px,
+    75.5316224px 49.6905232px,
+    74.2182612px 51.5163311px,
+    72.7008688px 53.3853024px,
+    70.9659476px 55.3592533px,
+    69px 57.5px,
+    69px 57.5px,
+    66.7549105px 60.0575467px,
+    64.478px 62.8473696px,
+    62.1516255px 65.7609029px,
+    59.758144px 68.6895808px,
+    57.2799125px 71.5248375px,
+    54.699288px 74.1581072px,
+    51.9986275px 76.4808241px,
+    49.160288px 78.3844224px,
+    46.1666265px 79.7603363px,
+    43px 80.5px
+  );
+  clip-path: polygon(
+    43px 80.5px,
+    43px 80.5px,
+    39.53360194px 80.6138793px,
+    35.93715952px 80.1950024px,
+    32.27225038px 79.3019371px,
+    28.60045216px 77.9932512px,
+    24.9833425px 76.3275125px,
+    21.48249904px 74.3632888px,
+    18.15949942px 72.1591479px,
+    15.07592128px 69.7736576px,
+    12.29334226px 67.2653857px,
+    9.87334px 64.6929px,
+    9.87334px 64.6929px,
+    7.9367128753px 62.2494616px,
+    6.2104916824px 59.6854208px,
+    4.6949916931px 57.0120192px,
+    3.3905281792px 54.2404984px,
+    2.2974164125px 51.3821px,
+    1.4159716648px 48.4480656px,
+    0.7465092079px 45.4496368px,
+    0.2893443136px 42.3980552px,
+    0.0447922537px 39.3045624px,
+    0.0131683px 36.1804px,
+    0.0131683px 36.1804px,
+    0.1857139617px 33.13325371px,
+    0.5595666176px 30.11371768px,
+    1.1381176039px 27.13886617px,
+    1.9247582568px 24.22577344px,
+    2.9228799125px 21.39151375px,
+    4.1358739072px 18.65316136px,
+    5.5671315771px 16.02779053px,
+    7.2200442584px 13.53247552px,
+    9.0980032873px 11.18429059px,
+    11.2044px 9.00031px,
+    11.2044px 9.00031px,
+    13.4497356px 7.0972821754px,
+    15.8464968px 5.4603242994px,
+    18.3770652px 4.0732687683px,
+    21.0238224px 2.9199479789px,
+    23.76915px 1.9841943275px,
+    26.5954296px 1.2498402107px,
+    29.4850428px 0.7007180251px,
+    32.4203712px 0.320660167px,
+    35.3837964px 0.0934990332px,
+    38.3577px 0.00306702px,
+    38.3577px 0.00306702px,
+    41.363953px 0.0404444904px,
+    44.35772px 0.2181352006px,
+    47.323653px 0.5511659215px,
+    50.246404px 1.0545634235px,
+    53.110625px 1.7433544775px,
+    55.900968px 2.6325658541px,
+    58.602085px 3.7372243239px,
+    61.198628px 5.0723566578px,
+    63.675249px 6.6529896262px,
+    66.0166px 8.49415px,
+    66.0166px 8.49415px,
+    68.3999054px 10.69325995px,
+    70.6702992px 13.0542976px,
+    72.7870678px 15.56399965px,
+    74.7094976px 18.2091028px,
+    76.396875px 20.97634375px,
+    77.8084864px 23.8524592px,
+    78.9036182px 26.82418585px,
+    79.6415568px 29.8782604px,
+    79.9815886px 33.00141955px,
+    79.883px 36.1804px,
+    79.883px 36.1804px,
+    79.5103764px 39.0453677px,
+    79.0147072px 41.5826016px,
+    78.3824948px 43.8539179px,
+    77.6002416px 45.9211328px,
+    76.65445px 47.8460625px,
+    75.5316224px 49.6905232px,
+    74.2182612px 51.5163311px,
+    72.7008688px 53.3853024px,
+    70.9659476px 55.3592533px,
+    69px 57.5px,
+    69px 57.5px,
+    66.7549105px 60.0575467px,
+    64.478px 62.8473696px,
+    62.1516255px 65.7609029px,
+    59.758144px 68.6895808px,
+    57.2799125px 71.5248375px,
+    54.699288px 74.1581072px,
+    51.9986275px 76.4808241px,
+    49.160288px 78.3844224px,
+    46.1666265px 79.7603363px,
+    43px 80.5px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease; /* Smooth rotation */
+  margin: 0 auto;
+}
+
+/* Apply the rotation effect when the card is hovered */
+.card:hover .icon-container {
+  transform: rotate(360deg);
+  background-color: #fff;
+}
+
+/* Ensures icon inside the container is visible and centered */
+.icon {
+  width: 40px;
+  height: 40px;
+}
