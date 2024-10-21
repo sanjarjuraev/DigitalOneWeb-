@@ -36,7 +36,7 @@ const Hero = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        className='relative z-10'
+        className='relative z-10 hero-swiper'
         onAutoplayTimeLeft={onAutoplayTimeLeft}
       >
         {/* Slides */}

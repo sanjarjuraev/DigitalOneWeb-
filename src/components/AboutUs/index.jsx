@@ -1,15 +1,15 @@
 /** @format */
 
-import Icon1 from '/src/assets/icons/about_image1.png';
-import Icon2 from '/src/assets/icons/about_image2.png';
-import Icon3 from '/src/assets/icons/about_image3.png';
-import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp';
-import { ReactComponent as Logo } from '../../assets/D112.svg'; // Adjust the path as needed
+import Icon1 from '/src/assets/icons/about_image1.png'
+import Icon2 from '/src/assets/icons/about_image2.png'
+import Icon3 from '/src/assets/icons/about_image3.png'
+import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp'
+import { ReactComponent as Logo } from '../../assets/D112.svg' // Adjust the path as needed
 
-import './About.css';
+import './About.css'
 const BusinessSuccessSection = () => {
   return (
-    <section className='container mx-auto lg:py-40 px-4 lg:px-40 about-us'>
+    <section className='container mx-auto lg:pt-20  px-4 lg:px-40 about-us'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
         {/* Left Column */}
         <div className='relative lg:order-1 order-1'>
@@ -178,7 +178,7 @@ const BusinessSuccessSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default BusinessSuccessSection;
+export default BusinessSuccessSection

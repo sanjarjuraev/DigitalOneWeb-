@@ -16,6 +16,17 @@ const Header = () => {
   const handleIconClick = (icon) => {
     setActiveIcon(icon) // Set the active icon when clicked
   }
+
+  const smoothScroll = (e, target) => {
+    e.preventDefault()
+    const element = document.querySelector(target)
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  }
   return (
     <div className='relative w-full '>
       {/* Top Header */}
@@ -112,22 +123,46 @@ const Header = () => {
 
           {/* Menu */}
           <div className='hidden lg:flex space-x-6'>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#home'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#home')}
+            >
               Home
             </a>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#about'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#about')}
+            >
               About Us
             </a>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#services'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#services')}
+            >
               Services
             </a>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#team'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#team')}
+            >
               Our Team
             </a>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#blog'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#blog')}
+            >
               Blog
             </a>
-            <a href='#' className='text-black hover:text-red-600'>
+            <a
+              href='#contact'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#contact')}
+            >
               Contact Us
             </a>
           </div>

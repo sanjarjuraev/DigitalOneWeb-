@@ -1,0 +1,45 @@
+/** @format */
+
+.profile-card {
+  background: rgba(253, 244, 244, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(124, 124, 124, 0.37);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.profile-card2 {
+  width: 370px;
+  height: 0;
+  background: rgba(255, 0, 0, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(135, 31, 112, 0.37);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: height 1s ease-in-out;
+}
+
+.profile-card:hover .profile-card2 {
+  height: 100%;
+}
+
+.team-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  overflow: visible !important;
+}
+.team-swiper .swiper {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+.team-swiper .swiper-slide img {
+  object-fit: cover;
+}
+
+.team-swiper {
+  overflow-x: clip !important; /* Ensure x overflow is hidden */
+  overflow-y: visible !important; /* Allow y overflow */
+}

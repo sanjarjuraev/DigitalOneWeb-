@@ -21,6 +21,9 @@
   --section-space: 120px;
   --section-space-mobile: 80px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -28,4 +31,45 @@ body {
 }
 p {
   font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .section-space {
+    padding-top: var(--section-space-mobile); /* Apply smaller section space */
+    padding-bottom: var(
+      --section-space-mobile
+    ); /* Apply smaller section space */
+  }
+}
+
+/* Tablets and Small Laptops (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section-space {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+}
+
+/* Medium to Large Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-space {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+}
+
+/* Desktops and Large Screens (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .section-space {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space-mobile);
+  }
+}
+
+/* Extra Large Desktops (1441px and above) */
+@media (min-width: 1441px) {
+  .section-space {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space-mobile);
+  }
 }

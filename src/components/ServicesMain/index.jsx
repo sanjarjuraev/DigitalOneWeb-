@@ -1,13 +1,15 @@
-import './serviceMain.css';
-import Icon1 from '/src/assets/icons/serviceIcon1_1.png';
-import Icon2 from '/src/assets/icons/serviceIcon1_2.png';
-import Icon3 from '/src/assets/icons/serviceIcon1_3.png';
-import Icon4 from '/src/assets/icons/serviceIcon1_4.png';
-import Icon11 from '/src/assets/bg-images/software-services.jpg';
-import Icon12 from '/src/assets/bg-images/ui-ux.jpg';
-import Icon13 from '/src/assets/bg-images/it-consulting.jpg';
-import Icon14 from '/src/assets/bg-images/web-dev.jpg';
-import Icon15 from '/src/assets/bg-images/database-security.jpg';
+/** @format */
+
+import './serviceMain.css'
+import Icon1 from '/src/assets/icons/serviceIcon1_1.png'
+import Icon2 from '/src/assets/icons/serviceIcon1_2.png'
+import Icon3 from '/src/assets/icons/serviceIcon1_3.png'
+import Icon4 from '/src/assets/icons/serviceIcon1_4.png'
+import Icon11 from '/src/assets/bg-images/software-services.jpg'
+import Icon12 from '/src/assets/bg-images/ui-ux.jpg'
+import Icon13 from '/src/assets/bg-images/it-consulting.jpg'
+import Icon14 from '/src/assets/bg-images/web-dev.jpg'
+import Icon15 from '/src/assets/bg-images/database-security.jpg'
 const services = [
   {
     id: 1,
@@ -44,15 +46,23 @@ const services = [
     description: 'Protect your data with security.',
     icon: Icon3,
   },
-];
+]
 
 const ServicesSection = () => {
   return (
-    <section className='py-12  container mx-auto w-full'>
-      <div className='text-center mb-10'>
-        <p className='text-purple-600 uppercase tracking-wider font-semibold'>
-          Our Feathered Services
-        </p>
+    <section className='container mx-auto w-full justify-center items-center'>
+      <div className='text-center mb-10 items-center justify-center'>
+        <div className='flex gap-3 items-center justify-center text-shadow'>
+          <span>
+            <img src='/src/assets/icons/title_icons.png' />
+          </span>
+          <h4 className='text-red-600 uppercase tracking-wider font-bold'>
+            Our Feathered Services
+          </h4>
+          <span>
+            <img src='/src/assets/icons/title_icons.png' />
+          </span>
+        </div>
         <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
           We Provide Exclusive Service For Your Business
         </h2>
@@ -63,13 +73,14 @@ const ServicesSection = () => {
             key={service.id}
             className='bg-white shadow-lg rounded-lg overflow-hidden card2'
           >
-            {/* Image at the top */}
-            <img
+            <div className='overflow-hidden   h-44 rounded-t-lg'>
+              <img
+                src={service.mainImg}
+                alt={service.title}
+                className='w-full h-48 object-cover main-image'
+              />
+            </div>
 
-              src={service.mainImg}
-              alt={service.title}
-              className='w-full h-48 object-cover main-image'
-            />
             <div className='icon-container2'>
               <img
                 src={service.icon}
@@ -78,14 +89,14 @@ const ServicesSection = () => {
               />
             </div>
             {/* Content below the image */}
-            <div className='p-6 mt-4'>
-              <h3 className='text-xl font-semibold mb-4 text-black'>
+            <div className='p-6 mt-4 '>
+              <h3 className='text-xl font-semibold mb-2 text-black'>
                 {service.title}
               </h3>
               <p className='text-gray-600 mb-4'>{service.description}</p>
               <a
                 href='#'
-                className='text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center'
+                className='text-pink-600 hover:text-red-500 font-semibold inline-flex items-center'
               >
                 Read More <span className='ml-2'>→</span>
               </a>
@@ -94,7 +105,7 @@ const ServicesSection = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ServicesSection;
+export default ServicesSection

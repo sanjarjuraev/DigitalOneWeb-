@@ -36,11 +36,12 @@
   left: 10%;
   width: 65px;
   height: 65px;
-  background: #ffb8b8;
+  border-radius: 4px;
+  background: #fbcfe8;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease; /* Smooth rotation */
+  transition: transform 1s ease; /* Smooth rotation */
   margin: 0 auto;
 }
 

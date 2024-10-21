@@ -5,4 +5,13 @@
 }
 .section-service {
   background-image: url('/src/assets/bg-images/service-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-team {
+  background-image: url('/src/assets/bg-images/team-bg2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

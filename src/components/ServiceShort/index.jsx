@@ -56,7 +56,7 @@ const ServiceCards = () => {
         >
           {/* The hover mask */}
           <div className='card-mask'></div>
-          <div className='absolute inset-0 flex flex-col  justify-between p-10  z-20'>
+          <div className='absolute inset-0 flex flex-col  justify-evenly p-5  z-20'>
             <div className='icon-container'>
               <img
                 src={service.icon}

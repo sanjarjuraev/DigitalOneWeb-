@@ -27,37 +27,3 @@
 .movingY {
   animation: movingY 8s linear infinite; /* Adjust animation timing for smaller screens */
 }
-/* Mobile Devices - Small (up to 480px) */
-@media (max-width: 480px) {
-  .about-us {
-    padding-top: var(--section-space-mobile); /* Apply smaller section space */
-  }
-}
-
-/* Tablets and Small Laptops (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .about-us {
-    padding-top: var(--section-space-mobile);
-  }
-}
-
-/* Medium to Large Laptops (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .about-us {
-    padding-top: var(--section-space-mobile);
-  }
-}
-
-/* Desktops and Large Screens (1025px to 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .about-us {
-    padding-top: var(--section-space);
-  }
-}
-
-/* Extra Large Desktops (1441px and above) */
-@media (min-width: 1441px) {
-  .about-us {
-    padding-top: var(--section-space);
-  }
-}
