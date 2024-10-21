@@ -1,16 +1,16 @@
 /** @format */
 
-import Icon1 from '/src/assets/icons/about_image1.png'
-import Icon2 from '/src/assets/icons/about_image2.png'
-import Icon3 from '/src/assets/icons/about_image3.png'
-import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp'
-import { ReactComponent as Logo } from '../../assets/D112.svg' // Adjust the path as needed
+import Icon1 from '/src/assets/icons/about_image1.png';
+import Icon2 from '/src/assets/icons/about_image2.png';
+import Icon3 from '/src/assets/icons/about_image3.png';
+import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp';
+import { ReactComponent as Logo } from '../../assets/D112.svg'; // Adjust the path as needed
 
-import './About.css'
+import './About.css';
 const BusinessSuccessSection = () => {
   return (
     <section className='container mx-auto lg:py-40 px-4 lg:px-40 about-us'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
         {/* Left Column */}
         <div className='relative lg:order-1 order-1'>
           {/* Large Image */}
@@ -24,7 +24,7 @@ const BusinessSuccessSection = () => {
             />
             {/* Satisfied Clients Box */}
             <div className='absolute top-6 -left-10 bg-white p-4 rounded-lg shadow-lg flex items-center space-x-2 movingX'>
-              <div className='bg-purple-100 p-2 rounded-full'>
+              <div className='bg-pink-200 p-2 rounded-full'>
                 <img src={Icon1} alt='Problem Solving' className='w-8 h-8' />
               </div>
               <div>
@@ -47,7 +47,7 @@ const BusinessSuccessSection = () => {
                 </div>
               </div>
             </div>
-            <div className='absolute top-3 right-2 lg:top-8 lg:right-5 w-8 h-8 z-20 movingY'>
+            <div className='absolute top-3 right-2 lg:top-8 lg:right-5 w-8 h-8 z-20 movingY hidden lg:block'>
               <Logo width='80px' height='80px' />
             </div>
           </div>
@@ -80,14 +80,47 @@ const BusinessSuccessSection = () => {
           <div className='space-y-4'>
             {/* Problem Solving */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-              <div className='flex items-center space-x-2'>
+              {/* <div className='grid grid-cols-2 items-center space-x-2'>
                 <div
-                  className='bg-purple-100 p-4 rounded-full'
-                  style={{ width: '64px', height: '64px' }}
+                  className='bg-pink-200 flex items-center justify-center'
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '100%',
+                    padding: 4,
+                  }}
                 >
-                  <img src={Icon2} alt='Mission & Vision' className='w-8 h-8' />
+                  <img
+                    src={Icon2}
+                    alt='Mission & Vision'
+                    width={32}
+                    height={32}
+                  />
                 </div>
-                <div>
+                <div className='col-span-2'>
+                  <h4 className='text-lg font-semibold text-black'>
+                    Problem Solving
+                  </h4>
+                  <p className='text-gray-500'>
+                    Delivering swift, effective solutions.
+                  </p>
+                </div>
+              </div> */}
+              <div className='grid grid-cols-4 items-center gap-2'>
+                <div
+                  className='bg-pink-200 flex items-center justify-center rounded-full'
+                  style={{
+                    width: '3rem', // 48px
+                    height: '3rem', // 48px
+                  }}
+                >
+                  <img
+                    src={Icon2}
+                    alt='Problem Solving'
+                    className='w-8 h-8' // 32px
+                  />
+                </div>
+                <div className='col-span-3'>
                   <h4 className='text-lg font-semibold text-black'>
                     Problem Solving
                   </h4>
@@ -96,12 +129,18 @@ const BusinessSuccessSection = () => {
                   </p>
                 </div>
               </div>
-              {/* Mission & Vision */}
-              <div className='flex items-center space-x-2'>
-                <div className='bg-purple-100 p-4 rounded-full'>
-                  <img src={Icon3} alt='Founder' className='w-8 h-8' />
+              {/* Mission & Vision */}{' '}
+              <div className='grid grid-cols-4 items-center gap-2'>
+                <div
+                  className='bg-pink-200 flex items-center justify-center rounded-full'
+                  style={{
+                    width: '3rem', // 48px
+                    height: '3rem', // 48px
+                  }}
+                >
+                  <img src={Icon3} alt='Mission & Vision' className='w-8 h-8' />
                 </div>
-                <div>
+                <div className='col-span-3'>
                   <h4 className='text-lg font-semibold text-black'>
                     Mission & Vision
                   </h4>
@@ -113,9 +152,9 @@ const BusinessSuccessSection = () => {
             </div>
 
             {/* Founder */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-4'>
-              <div className='flex items-center space-x-4'>
-                <div className='bg-purple-100  rounded-full'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-16 gap-4'>
+              <div className='flex items-center space-x-4 lg:col-span-2'>
+                <div className='bg-pink-200  rounded-full'>
                   <img src={Avatar} alt='Founder' className='w-12 h-12' />
                 </div>
                 <div>
@@ -126,7 +165,7 @@ const BusinessSuccessSection = () => {
                 </div>
               </div>
               {/* Call to Action Button */}
-              <div className='flex items-center space-x-4 mb-5'>
+              <div className='flex items-center justify-center space-x-4 mb-5 sm:mb-0'>
                 <button
                   className='btn-cubic px-2 md:px-4 py-2 md:py-2 rounded-full hover:rounded-full transition ease-in-out duration-500
 '
@@ -139,7 +178,7 @@ const BusinessSuccessSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BusinessSuccessSection
+export default BusinessSuccessSection;
