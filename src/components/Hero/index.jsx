@@ -1,20 +1,20 @@
 /** @format */
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/autoplay'
-import './Hero.css' // Add your custom animations and styles here
-import { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import './Hero.css'; // Add your custom animations and styles here
+import { useRef } from 'react';
 const Hero = () => {
-  const progressCircle = useRef(null)
-  const progressContent = useRef(null)
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current?.style.setProperty('--progress', 1 - progress)
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`
-  }
+    progressCircle.current?.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
   return (
     <section className='relative w-full h-screen md:max-h-[800px] bg-slate-600'>
       {/* Swiper Container */}
@@ -85,7 +85,6 @@ const Hero = () => {
             </button>
           </div>
         </SwiperSlide>
-
         <SwiperSlide>
           <div
             className='relative w-full h-full flex items-center text-white'
@@ -177,32 +176,31 @@ const Hero = () => {
             </button>
           </div>
         </SwiperSlide>
-
         <div className='autoplay-progress' slot='container-end'>
           <svg viewBox='0 0 48 48' ref={progressCircle}>
             <circle cx='24' cy='24' r='20'></circle>
           </svg>
           <span ref={progressContent}></span>
         </div>
-        {/* Add more slides as needed */}
+        {/* Add more slides as needed */}{' '}
+        <div className='absolute right-2 bottom-20 w-20'>
+          <div className='swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20'>
+            <i className='fas fa-chevron-right text-2xl hover:text-red-600'></i>
+          </div>
+          <div className='swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20'>
+            <i className='fas fa-chevron-left text-2xl hover:text-red-600'></i>
+          </div>
+        </div>
+        <div className='absolute right-2 bottom-28 w-20'>
+          <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
+        </div>
       </Swiper>
 
       {/* Navigation Buttons */}
-      <div className='absolute right-2 bottom-20 w-20'>
-        <div className='swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20'>
-          <i className='fas fa-chevron-right text-2xl hover:text-red-600'></i>
-        </div>
-        <div className='swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20'>
-          <i className='fas fa-chevron-left text-2xl hover:text-red-600'></i>
-        </div>
-      </div>
 
       {/* Pagination Dots */}
-      <div className='absolute right-2 bottom-28 w-20'>
-        <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
-      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

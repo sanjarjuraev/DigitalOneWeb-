@@ -1,0 +1,120 @@
+/* Wrapper for the card */
+.hover14 figure {
+  width: 465px;
+  height: 465px;
+  position: relative;
+  overflow: hidden; /* Ensure the shine effect doesn't overflow the card */
+  border-radius: 1.5rem;
+}
+
+/* Create the shine effect */
+.hover14 figure::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start completely outside the left side of the card */
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg); /* Create the diagonal shine */
+  transition: all 0.75s ease; /* Smooth transition */
+}
+
+/* Shine animation on hover */
+.hover14 figure:hover::before {
+  left: 100%; /* Move the shine effect all the way to the right */
+  transition: all 0.75s ease; /* Ensure the animation is smooth */
+}
+
+/* Optional: Slight scale up on hover */
+.hover14 figure:hover {
+  /* transform: scale(1.02); */
+  transition: transform 0.5s ease;
+}
+.projects-slider .swiper-slide {
+  max-width: 465px !important;
+  min-width: 250px !important;
+}
+
+@media (max-width: 1024px) {
+  .hover14 figure,
+  .hover14 figure .hover15 {
+    width: 400px !important;
+    height: 400px !important;
+  }
+  .projects-slider .swiper-slide {
+    width: 400px !important;
+  }
+}
+
+/* Media Query for Small Tablets and Large Phones */
+@media (max-width: 768px) {
+  .hover14 figure,
+  .hover14 figure .hover15 {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .projects-slider .swiper-slide {
+    width: 350px !important;
+  }
+}
+
+/* Media Query for Small Phones */
+@media (max-width: 640px) {
+  .hover14 figure,
+  .hover14 figure .hover15 {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .projects-slider .swiper-slide {
+    width: 300px !important;
+  }
+}
+
+/* Media Query for Very Small Phones */
+@media (max-width: 480px) {
+  .hover14 figure,
+  .hover14 figure .hover15 {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .projects-slider .swiper-slide {
+    width: 250px !important;
+  }
+}
+.projects-slider .swiper-button-next::after,
+.projects-slider .swiper-button-prev::after {
+  content: none !important;
+}
+.projects-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  overflow: visible !important;
+}
+.projects-slider .swiper {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+.projects-slider .swiper-slide img {
+  object-fit: cover;
+}
+
+.projects-slider {
+  overflow-x: clip !important; /* Ensure x overflow is hidden */
+  overflow-y: visible !important; /* Allow y overflow */
+}
+.projects-slider .swiper-pagination-bullet {
+  color: rgb(241, 140, 140) !important;
+  background-color: rgb(241, 140, 140) !important;
+}
+.projects-slider .swiper-pagination-bullet-active {
+  color: red !important;
+  background-color: red !important;
+}

@@ -1,0 +1,31 @@
+.testimonial-swiper .swiper-button-next::after,
+.testimonial-swiper .swiper-button-prev::after {
+  content: none !important;
+}
+
+.testimonial-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  overflow: visible !important;
+}
+.testimonial-swiper .swiper {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+.testimonial-swiper .swiper-slide img {
+  object-fit: cover;
+}
+
+.testimonial-swiper {
+  overflow-x: clip !important; /* Ensure x overflow is hidden */
+  overflow-y: visible !important; /* Allow y overflow */
+}
+.testimonial-swiper .swiper-pagination-bullet {
+  color: rgb(241, 140, 140) !important;
+  background-color: rgb(241, 140, 140) !important;
+}
+.testimonial-swiper .swiper-pagination-bullet-active {
+  color: red !important;
+  background-color: red !important;
+}

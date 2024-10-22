@@ -145,6 +145,13 @@ const Header = () => {
               Services
             </a>
             <a
+              href='#pojects'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#pojects')}
+            >
+              Pojects
+            </a>
+            <a
               href='#team'
               className='text-black hover:text-red-600'
               onClick={(e) => smoothScroll(e, '#team')}

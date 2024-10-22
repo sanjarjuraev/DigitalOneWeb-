@@ -73,3 +73,7 @@ p {
     padding-bottom: var(--section-space-mobile);
   }
 }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+}

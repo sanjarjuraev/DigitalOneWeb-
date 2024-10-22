@@ -10,7 +10,7 @@
 }
 
 .profile-card2 {
-  width: 370px;
+  width: 365px;
   height: 0;
   background: rgba(255, 0, 0, 0.15);
   box-shadow: 0 8px 32px 0 rgba(135, 31, 112, 0.37);
@@ -42,4 +42,12 @@
 .team-swiper {
   overflow-x: clip !important; /* Ensure x overflow is hidden */
   overflow-y: visible !important; /* Allow y overflow */
+}
+.team-swiper .swiper-pagination-bullet {
+  color: rgb(241, 140, 140) !important;
+  background-color: rgb(241, 140, 140) !important;
+}
+.team-swiper .swiper-pagination-bullet-active {
+  color: red !important;
+  background-color: red !important;
 }
