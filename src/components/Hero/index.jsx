@@ -7,6 +7,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import './Hero.css'; // Add your custom animations and styles here
+import Logo from '/src/assets/D112.svg'; // Adjust the path as needed
+
+import SliderImg1 from '/src/assets/bg-images/wms-bg.jpg';
+import SliderImg2 from '/src/assets/bg-images/erp.jpg';
+import SliderImg3 from '/src/assets/bg-images/tms.jpg';
 import { useRef } from 'react';
 const Hero = () => {
   const progressCircle = useRef(null);
@@ -44,7 +49,7 @@ const Hero = () => {
           <div
             className='relative w-full h-full flex items-center justify-left  text-white'
             style={{
-              backgroundImage: `url('/src/assets/bg-images/wms-bg.jpg')`,
+              backgroundImage: `url(${SliderImg1})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -64,7 +69,7 @@ const Hero = () => {
             style={{
               borderTopLeftRadius: '20px',
               borderBottomRightRadius: '20px',
-              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundImage: `url('${Logo}')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -89,7 +94,7 @@ const Hero = () => {
           <div
             className='relative w-full h-full flex items-center text-white'
             style={{
-              backgroundImage: `url('/src/assets/bg-images/erp.jpg')`,
+              backgroundImage: `url(${SliderImg2})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -110,7 +115,7 @@ const Hero = () => {
             style={{
               borderTopLeftRadius: '20px',
               borderBottomRightRadius: '20px',
-              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundImage: `url(${Logo})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -135,7 +140,7 @@ const Hero = () => {
           <div
             className='relative w-full h-full flex items-center text-white'
             style={{
-              backgroundImage: `url('/src/assets/bg-images/tms.jpg')`,
+              backgroundImage: `url(${SliderImg3})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -155,7 +160,7 @@ const Hero = () => {
             style={{
               borderTopLeftRadius: '20px',
               borderBottomRightRadius: '20px',
-              backgroundImage: `url('/src/assets/D112.svg')`,
+              backgroundImage: `url(${Logo})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',

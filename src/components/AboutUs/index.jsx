@@ -1,12 +1,15 @@
 /** @format */
 
-import Icon1 from '/src/assets/icons/about_image1.png'
-import Icon2 from '/src/assets/icons/about_image2.png'
-import Icon3 from '/src/assets/icons/about_image3.png'
-import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp'
-import { ReactComponent as Logo } from '../../assets/D112.svg' // Adjust the path as needed
+import Icon1 from '/src/assets/icons/about_image1.png';
+import Icon2 from '/src/assets/icons/about_image2.png';
+import Icon3 from '/src/assets/icons/about_image3.png';
+import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp';
+import aboutTumb1 from '/src/assets/bg-images/aboutThumb1_1.webp';
+import aboutTumb2 from '/src/assets/bg-images/aboutThumb1_2.webp';
+import titleIcon from '/src/assets/icons/title_icons.png';
+import { ReactComponent as Logo } from '../../assets/D112.svg'; // Adjust the path as needed
 
-import './About.css'
+import './About.css';
 const BusinessSuccessSection = () => {
   return (
     <section className='container mx-auto lg:pt-20  px-4 lg:px-40 about-us'>
@@ -16,7 +19,7 @@ const BusinessSuccessSection = () => {
           {/* Large Image */}
           <div className='relative'>
             <img
-              src='src/assets/bg-images/aboutThumb1_1.webp'
+              src={aboutTumb1}
               alt='Team working'
               className='rounded-lg'
               width='439px'
@@ -36,7 +39,7 @@ const BusinessSuccessSection = () => {
             <div className='absolute bottom-3 right-2 lg:bottom-8 lg:right-5'>
               <div className='relative border-4 border-white rounded-lg'>
                 <img
-                  src='src/assets/bg-images/aboutThumb1_2.webp'
+                  src={aboutTumb2}
                   alt='Meeting'
                   className='w-full rounded-lg shadow-lg'
                 />
@@ -57,13 +60,13 @@ const BusinessSuccessSection = () => {
         <div className='relative lg:order-2 order-2 lg:max-w-lg'>
           <div className='flex gap-3 items-center'>
             <span>
-              <img src='/src/assets/icons/title_icons.png' />
+              <img src={titleIcon} />
             </span>
             <h5 className='text-red-500 uppercase tracking-wider font-semibold'>
               What we do
             </h5>
             <span>
-              <img src='/src/assets/icons/title_icons.png' />
+              <img src={titleIcon} />
             </span>
           </div>
 
@@ -178,7 +181,7 @@ const BusinessSuccessSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BusinessSuccessSection
+export default BusinessSuccessSection;
