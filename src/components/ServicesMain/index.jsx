@@ -1,15 +1,17 @@
 /** @format */
 
-import './serviceMain.css'
-import Icon1 from '/src/assets/icons/serviceIcon1_1.png'
-import Icon2 from '/src/assets/icons/serviceIcon1_2.png'
-import Icon3 from '/src/assets/icons/serviceIcon1_3.png'
-import Icon4 from '/src/assets/icons/serviceIcon1_4.png'
-import Icon11 from '/src/assets/bg-images/software-services.jpg'
-import Icon12 from '/src/assets/bg-images/ui-ux.jpg'
-import Icon13 from '/src/assets/bg-images/it-consulting.jpg'
-import Icon14 from '/src/assets/bg-images/web-dev.jpg'
-import Icon15 from '/src/assets/bg-images/database-security.jpg'
+import './serviceMain.css';
+import Icon1 from '/src/assets/icons/serviceIcon1_1.png';
+import Icon2 from '/src/assets/icons/serviceIcon1_2.png';
+import Icon3 from '/src/assets/icons/serviceIcon1_3.png';
+import Icon4 from '/src/assets/icons/serviceIcon1_4.png';
+import Icon11 from '/src/assets/bg-images/software-services.jpg';
+import Icon12 from '/src/assets/bg-images/ui-ux.jpg';
+import Icon13 from '/src/assets/bg-images/it-consulting.jpg';
+import Icon14 from '/src/assets/bg-images/web-dev.jpg';
+import Icon15 from '/src/assets/bg-images/database-security.jpg';
+import titleIcon from '/src/assets/icons/title_icons.png';
+
 const services = [
   {
     id: 1,
@@ -46,7 +48,7 @@ const services = [
     description: 'Protect your data with security.',
     icon: Icon3,
   },
-]
+];
 
 const ServicesSection = () => {
   return (
@@ -54,13 +56,13 @@ const ServicesSection = () => {
       <div className='text-center mb-10 items-center justify-center'>
         <div className='flex gap-3 items-center justify-center text-shadow'>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
           <h4 className='text-red-600 uppercase tracking-wider font-bold'>
             Our Feathered Services
           </h4>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
         </div>
         <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
@@ -105,7 +107,7 @@ const ServicesSection = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesSection
+export default ServicesSection;

@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Testimonials.css';
+import titleIcon from '/src/assets/icons/title_icons.png';
 const testimonials = [
   {
     id: 1,
@@ -49,13 +50,13 @@ const TestimonialsSection = () => {
       <div className='text-center mb-10 items-center justify-center'>
         <div className='flex gap-3 items-center justify-center text-shadow'>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
           <h4 className='uppercase tracking-wider font-bold text-red-500'>
             Testimonials
           </h4>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
         </div>
         <h2 className='text-3xl md:text-4xl font-bold text-black'>

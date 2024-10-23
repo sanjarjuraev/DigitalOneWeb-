@@ -1,14 +1,14 @@
 /** @format */
-import Icon1 from '/src/assets/bg-images/teamThumb1_1.webp'
-import Icon2 from '/src/assets/bg-images/teamThumb1_2.webp'
-import Icon3 from '/src/assets/bg-images/teamThumb1_3.webp'
-import './Team.css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay } from 'swiper/modules'
+import Icon1 from '/src/assets/bg-images/teamThumb1_1.webp';
+import Icon2 from '/src/assets/bg-images/teamThumb1_2.webp';
+import Icon3 from '/src/assets/bg-images/teamThumb1_3.webp';
+import './Team.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
-
+import 'swiper/css';
+import 'swiper/css/pagination';
+import titleIcon from '/src/assets/icons/title_icons.png';
 const teamMembers = [
   {
     id: 1,
@@ -46,7 +46,7 @@ const teamMembers = [
     role: 'Senior Frontend Engineer',
     imgSrc: Icon3,
   },
-]
+];
 
 const TeamSection = () => {
   return (
@@ -54,13 +54,13 @@ const TeamSection = () => {
       <div className='text-center mb-10 items-center justify-center'>
         <div className='flex gap-3 items-center justify-center'>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
           <h5 className='text-red-500 uppercase tracking-wider font-semibold'>
             Our Team Member
           </h5>
           <span>
-            <img src='/src/assets/icons/title_icons.png' />
+            <img src={titleIcon} />
           </span>
         </div>
         <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
@@ -126,7 +126,7 @@ const TeamSection = () => {
         </Swiper>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TeamSection
+export default TeamSection;
