@@ -9,6 +9,8 @@ import Icon5 from '/src/assets/bg-images/e-commerce.png';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
+import titleIconWhite from '/src/assets/icons/title-icons-white.png';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -51,13 +53,13 @@ const ProjectsSection = () => {
       <div className='text-center mb-10 items-center justify-center'>
         <div className='flex gap-3 items-center justify-center text-shadow'>
           <span>
-            <img src='/src/assets/icons/title-icons-white.png' />
+            <img src={titleIconWhite} />
           </span>
           <h4 className='uppercase tracking-wider font-bold text-white'>
             Recent Works
           </h4>
           <span>
-            <img src='/src/assets/icons/title-icons-white.png' />
+            <img src={titleIconWhite} />
           </span>
         </div>
         <h2 className='text-3xl md:text-4xl font-bold text-white'>

@@ -5,12 +5,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Testimonials.css';
 import titleIcon from '/src/assets/icons/title_icons.png';
+import User1 from '/src/assets/bg-images/testiThumb1_1.webp';
+import User2 from '/src/assets/bg-images/testiThumb1_2.webp';
 const testimonials = [
   {
     id: 1,
     name: 'Albert Flores',
     role: 'Medical Assistant',
-    image: '/src/assets/bg-images/testiThumb1_1.webp', // Replace with actual image path
+    image: User1,
     rating: 5,
     quote:
       'I have been a customer of Best Computer Hub for over a year now, and I am continually impressed by their exceptional service and quality products. Every purchase I have made has been seamless, from ordering online to receiving the items on time. The product descriptions are accurate.',
@@ -19,7 +21,7 @@ const testimonials = [
     id: 2,
     name: 'Kathryn Murphy',
     role: 'Web Designer',
-    image: '/src/assets/bg-images/testiThumb1_2.webp', // Replace with actual image path
+    image: User2,
     rating: 5,
     quote:
       'Techo has completely transformed our web development process. The user-friendly interface and powerful features make building and maintaining our website a breeze. The customer support team is always responsive and helpful, ensuring we get the most out of their platform. Highly recommended!',
@@ -28,7 +30,7 @@ const testimonials = [
     id: 3,
     name: 'Albert Flores',
     role: 'Medical Assistant',
-    image: '/src/assets/bg-images/testiThumb1_1.webp', // Replace with actual image path
+    image: User1,
     rating: 5,
     quote:
       'I have been a customer of Best Computer Hub for over a year now, and I am continually impressed by their exceptional service and quality products. Every purchase I have made has been seamless, from ordering online to receiving the items on time. The product descriptions are accurate.',
@@ -37,7 +39,7 @@ const testimonials = [
     id: 4,
     name: 'Kathryn Murphy',
     role: 'Web Designer',
-    image: '/src/assets/bg-images/testiThumb1_2.webp', // Replace with actual image path
+    image: User2,
     rating: 5,
     quote:
       'Techo has completely transformed our web development process. The user-friendly interface and powerful features make building and maintaining our website a breeze. The customer support team is always responsive and helpful, ensuring we get the most out of their platform. Highly recommended!',
