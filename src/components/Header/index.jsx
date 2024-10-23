@@ -19,6 +19,10 @@ const Header = () => {
 
   const smoothScroll = (e, target) => {
     e.preventDefault();
+    let menuItem =
+      target?.substring(1)?.charAt(0)?.toUpperCase() + target?.substring(2);
+    setActiveMenu(menuItem);
+
     const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
@@ -145,19 +149,20 @@ const Header = () => {
             >
               Services
             </a>
-            <a
-              href='#pojects'
-              className='text-black hover:text-red-600'
-              onClick={(e) => smoothScroll(e, '#pojects')}
-            >
-              Pojects
-            </a>
+
             <a
               href='#team'
               className='text-black hover:text-red-600'
               onClick={(e) => smoothScroll(e, '#team')}
             >
               Our Team
+            </a>
+            <a
+              href='#projects'
+              className='text-black hover:text-red-600'
+              onClick={(e) => smoothScroll(e, '#projects')}
+            >
+              Pojects
             </a>
             <a
               href='#blog'
@@ -167,9 +172,9 @@ const Header = () => {
               Blog
             </a>
             <a
-              href='#contact'
+              href='#footer'
               className='text-black hover:text-red-600'
-              onClick={(e) => smoothScroll(e, '#contact')}
+              onClick={(e) => smoothScroll(e, '#footer')}
             >
               Contact Us
             </a>

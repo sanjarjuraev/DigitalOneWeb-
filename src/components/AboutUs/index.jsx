@@ -32,7 +32,7 @@ const BusinessSuccessSection = () => {
                 <img src={Icon1} alt='Problem Solving' className='w-8 h-8' />
               </div>
               <div>
-                <h4 className='text-lg font-semibold text-black'>6,561+</h4>
+                <h4 className='text-lg font-semibold text-black'>20+</h4>
                 <p className='text-gray-500'>Satisfied Clients</p>
               </div>
             </div>
@@ -45,7 +45,7 @@ const BusinessSuccessSection = () => {
                   className='w-full rounded-lg shadow-lg'
                 />
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <button className='text-white text-4xl'>
+                  <button className='text-white text-4xl video-play-button'>
                     <i className='fas fa-play-circle'></i>
                   </button>
                 </div>

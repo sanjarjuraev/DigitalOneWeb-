@@ -1,5 +1,6 @@
 import { ReactComponent as Logo } from '../../assets/d1-extended.svg'; // Adjust the path as needed
-
+import Blog1 from '/src/assets/bg-images/e-commerce.png';
+import Blog2 from '/src/assets/bg-images/erp-solutions.png';
 import './Footer.css';
 const Footer = () => {
   return (
@@ -35,22 +36,22 @@ const Footer = () => {
           <h3 className='text-lg font-semibold mb-4'>Quick Links</h3>
           <ul className='space-y-2'>
             <li>
-              <a href='#' className='hover:text-red-400'>
+              <a href='#about' className='hover:text-red-400'>
                 About Us
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-red-400'>
+              <a href='#services' className='hover:text-red-400'>
                 Our Services
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-red-400'>
+              <a href='#team' className='hover:text-red-400'>
                 Our Team
               </a>
             </li>
             <li>
-              <a href='#' className='hover:text-red-400'>
+              <a href='#projects' className='hover:text-red-400'>
                 Our Recent Works
               </a>
             </li>
@@ -68,7 +69,7 @@ const Footer = () => {
           <ul className='space-y-4'>
             <li className='flex items-center'>
               <img
-                src='/src/assets/bg-images/erp-solutions.png'
+                src={Blog2}
                 alt='Post Image'
                 className='w-12 h-12 rounded-md mr-4'
               />
@@ -84,7 +85,7 @@ const Footer = () => {
             </li>
             <li className='flex items-center'>
               <img
-                src='src/assets/bg-images/e-commerce.png'
+                src={Blog1}
                 alt='Post Image'
                 className='w-12 h-12 rounded-md mr-4'
               />
