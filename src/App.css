@@ -34,3 +34,9 @@
   background-size: cover;
   background-position: center;
 }
+.section-footer {
+  background-image: url('/src/assets/bg-images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

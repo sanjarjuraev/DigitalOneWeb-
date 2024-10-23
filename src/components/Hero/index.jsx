@@ -44,7 +44,7 @@ const Hero = () => {
           <div
             className='relative w-full h-full flex items-center justify-left  text-white'
             style={{
-              backgroundImage: `url('/src/assets/bg-images/crm.png')`,
+              backgroundImage: `url('/src/assets/bg-images/wms-bg.jpg')`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',

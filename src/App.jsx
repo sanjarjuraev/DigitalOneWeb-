@@ -9,6 +9,9 @@ import ServicesSection from './components/ServicesMain';
 import TeamSection from './components/Team';
 import ProjectsSection from './components/Projects';
 import TestimonialsSection from './components/Testimonials';
+import Footer from './components/Footer';
+import FooterBootom from './components/FooterBootom';
+import ScrollToTopButton from './components/GoToTop';
 
 function App() {
   return (
@@ -48,6 +51,16 @@ function App() {
       >
         <TestimonialsSection />
       </section>
+      <section
+        id='footer'
+        className='relative  m-auto  section-footer pt-10 pb-10'
+      >
+        <Footer />
+      </section>
+      <section id='footer-bottom' className='relative  m-auto'>
+        <FooterBootom />
+      </section>
+      <ScrollToTopButton />
     </div>
   );
 }

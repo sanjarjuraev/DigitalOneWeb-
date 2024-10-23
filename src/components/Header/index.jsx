@@ -1,32 +1,32 @@
 /** @format */
 
-import { useState } from 'react'
-import { ReactComponent as Logo } from '../../assets/d1-extended.svg' // Adjust the path as needed
+import { useState } from 'react';
+import { ReactComponent as Logo } from '../../assets/d1-extended.svg'; // Adjust the path as needed
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [activeMenu, setActiveMenu] = useState(null)
-  const [activeIcon, setActiveIcon] = useState(null)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [activeIcon, setActiveIcon] = useState(null);
   const handleClick = (menu) => {
-    setActiveMenu(menu)
-  }
+    setActiveMenu(menu);
+  };
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
+    setMenuOpen(!menuOpen);
+  };
   const handleIconClick = (icon) => {
-    setActiveIcon(icon) // Set the active icon when clicked
-  }
+    setActiveIcon(icon); // Set the active icon when clicked
+  };
 
   const smoothScroll = (e, target) => {
-    e.preventDefault()
-    const element = document.querySelector(target)
+    e.preventDefault();
+    const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
         top: element.offsetTop,
         behavior: 'smooth',
-      })
+      });
     }
-  }
+  };
   return (
     <div className='relative w-full '>
       {/* Top Header */}
@@ -42,6 +42,7 @@ const Header = () => {
           </div>
           <div className='flex space-x-4'>
             <span className='hidden md:inline'>Follow Us:</span>
+
             {/* Facebook */}
             <a
               href='#'
@@ -361,7 +362,7 @@ const Header = () => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
