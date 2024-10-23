@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import './Hero.css'; // Add your custom animations and styles here
-import Logo from '/src/assets/D112.svg'; // Adjust the path as needed
+import Logo from '/src/assets/icons/D112.png'; // Adjust the path as needed
 
 import SliderImg1 from '/src/assets/bg-images/wms-bg.jpg';
 import SliderImg2 from '/src/assets/bg-images/erp.jpg';

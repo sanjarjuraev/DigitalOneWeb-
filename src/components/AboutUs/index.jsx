@@ -7,7 +7,8 @@ import Avatar from '/src/assets/bg-images/aboutProfile1_1.webp';
 import aboutTumb1 from '/src/assets/bg-images/aboutThumb1_1.webp';
 import aboutTumb2 from '/src/assets/bg-images/aboutThumb1_2.webp';
 import titleIcon from '/src/assets/icons/title_icons.png';
-import { ReactComponent as Logo } from '../../assets/D112.svg'; // Adjust the path as needed
+import Logo from '/src/assets/icons/D112.png';
+// import { ReactComponent as Logo } from '/src/assets/icons/D112.svg'; // Adjust the path as needed
 
 import './About.css';
 const BusinessSuccessSection = () => {
