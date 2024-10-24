@@ -15,49 +15,49 @@ import ScrollToTopButton from './components/GoToTop';
 
 function App() {
   return (
-    <div className='w-full'>
-      <section className='sticky top-0 z-50'>
+    <div className="w-full">
+      <section className="sticky top-0 z-50">
         <Header />
       </section>
-      <section id='home'>
+      <section id="home" className="hero-section section-hero">
         <Hero />
       </section>
-      <section className='relative container m-auto '>
+      <section className="relative container m-auto ">
         <ServiceCards />
       </section>
-      <section id='about' className='relative section-about section-space'>
+      <section id="about" className="relative section-about section-space">
         <AboutUs />
       </section>
       <section
-        id='services'
-        className='relative section-service m-auto section-space'
+        id="services"
+        className="relative section-service m-auto section-space"
       >
         <ServicesSection />
       </section>
       <section
-        id='team'
-        className='relative  m-auto section-space section-team'
+        id="team"
+        className="relative  m-auto section-space section-team"
       >
         <TeamSection />
       </section>
-      <section id='projects' className='relative  m-auto  section-pojects'>
-        <div className='inner-bg w-full h-full section-space'>
+      <section id="projects" className="relative  m-auto  section-pojects">
+        <div className="inner-bg w-full h-full section-space">
           <ProjectsSection />
         </div>
       </section>
       <section
-        id='testimonials'
-        className='relative  m-auto  section-testimonials section-space'
+        id="testimonials"
+        className="relative  m-auto  section-testimonials section-space"
       >
         <TestimonialsSection />
       </section>
       <section
-        id='footer'
-        className='relative  m-auto  section-footer pt-10 pb-10'
+        id="footer"
+        className="relative  m-auto  section-footer pt-10 pb-10"
       >
         <Footer />
       </section>
-      <section id='footer-bottom' className='relative  m-auto'>
+      <section id="footer-bottom" className="relative  m-auto">
         <FooterBootom />
       </section>
       <ScrollToTopButton />

@@ -1,7 +1,7 @@
 /** @format */
 
 import { useState } from 'react';
-import { ReactComponent as Logo } from '../../assets/d1-extended.svg'; // Adjust the path as needed
+import { ReactComponent as Logo } from '/src/assets/d1-extended.svg'; // Adjust the path as needed
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,24 +32,24 @@ const Header = () => {
     }
   };
   return (
-    <div className='relative w-full '>
+    <div className="relative w-full ">
       {/* Top Header */}
-      <div className='bg-red-900 text-white text-sm py-3'>
-        <div className='container mx-auto flex justify-between items-center px-4'>
-          <div className='flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4'>
+      <div className="bg-red-900 text-white text-sm py-3 hidden md:block">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
             <span>
-              <i className='fa fa-envelope'></i> info@example.com
+              <i className="fa fa-envelope"></i> info@example.com
             </span>
             <span>
-              <i className='fa fa-phone'></i> +208-666-0112
+              <i className="fa fa-phone"></i> +208-666-0112
             </span>
           </div>
-          <div className='flex space-x-4'>
-            <span className='hidden md:inline'>Follow Us:</span>
+          <div className="flex space-x-4">
+            <span className="hidden md:inline">Follow Us:</span>
 
             {/* Facebook */}
             <a
-              href='#'
+              href="#"
               className={`w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-300 ${
                 activeIcon === 'facebook'
                   ? 'bg-white text-red-500'
@@ -57,12 +57,12 @@ const Header = () => {
               } hover:bg-white hover:text-red-500`}
               onClick={() => handleIconClick('facebook')}
             >
-              <i className='fab fa-facebook-f'></i>
+              <i className="fab fa-facebook-f"></i>
             </a>
 
             {/* Instagram */}
             <a
-              href='#'
+              href="#"
               className={`w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-300 ${
                 activeIcon === 'instagram'
                   ? 'bg-white text-red-500'
@@ -70,12 +70,12 @@ const Header = () => {
               } hover:bg-white hover:text-red-500`}
               onClick={() => handleIconClick('instagram')}
             >
-              <i className='fab fa-instagram'></i>
+              <i className="fab fa-instagram"></i>
             </a>
 
             {/* LinkedIn */}
             <a
-              href='#'
+              href="#"
               className={`w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-300 ${
                 activeIcon === 'linkedin'
                   ? 'bg-white text-red-500'
@@ -83,12 +83,12 @@ const Header = () => {
               } hover:bg-white hover:text-red-500`}
               onClick={() => handleIconClick('linkedin')}
             >
-              <i className='fab fa-linkedin'></i>
+              <i className="fab fa-linkedin"></i>
             </a>
 
             {/* Telegram */}
             <a
-              href='#'
+              href="#"
               className={`w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-300 ${
                 activeIcon === 'telegram'
                   ? 'bg-white text-red-500'
@@ -96,29 +96,29 @@ const Header = () => {
               } hover:bg-white hover:text-red-500`}
               onClick={() => handleIconClick('telegram')}
             >
-              <i className='fab fa-telegram'></i>
+              <i className="fab fa-telegram"></i>
             </a>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className='absolute right-0 left-0 bg-white shadow-md z-30'>
-        <div className='container mx-auto flex justify-between items-center lg:px-0'>
+      <nav className="absolute right-0 left-0 bg-white shadow-md z-30">
+        <div className="container mx-auto flex justify-between items-center lg:px-0">
           {/* Logo */}
-          <div className='relative h-full flex items-center'>
+          <div className="relative h-full flex items-center">
             <div
-              className='relative  h-full p-4 px-8 flex items-center'
+              className="relative  h-full p-4 px-8 flex items-center"
               style={{
                 backgroundImage:
                   'linear-gradient(to right, white, #FFC0CB 4%, #FF6347 40%, #FF4500 65%, red)',
                 clipPath: 'polygon(0 0, 90% 0, 100% 100%, 0% 100%)', // Creates a slanted shape
               }}
             >
-              <Logo className='h-12 w-auto' />
+              <Logo className="h-12 w-auto" />
             </div>
             <div
-              className='absolute top-0 -right-10 h-full w-12 bg-red'
+              className="absolute top-0 -right-10 h-full w-12 bg-red"
               style={{
                 clipPath: 'polygon(0 0, 35% 0, 78% 100%, 43% 100%)',
                 backgroundColor: '#ff4500',
@@ -127,53 +127,53 @@ const Header = () => {
           </div>
 
           {/* Menu */}
-          <div className='hidden lg:flex space-x-6'>
+          <div className="hidden lg:flex space-x-6">
             <a
-              href='#home'
-              className='text-black hover:text-red-600'
+              href="#home"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#home')}
             >
               Home
             </a>
             <a
-              href='#about'
-              className='text-black hover:text-red-600'
+              href="#about"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#about')}
             >
               About Us
             </a>
             <a
-              href='#services'
-              className='text-black hover:text-red-600'
+              href="#services"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#services')}
             >
               Services
             </a>
 
             <a
-              href='#team'
-              className='text-black hover:text-red-600'
+              href="#team"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#team')}
             >
               Our Team
             </a>
             <a
-              href='#projects'
-              className='text-black hover:text-red-600'
+              href="#projects"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#projects')}
             >
               Pojects
             </a>
             <a
-              href='#blog'
-              className='text-black hover:text-red-600'
+              href="#blog"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#blog')}
             >
               Blog
             </a>
             <a
-              href='#footer'
-              className='text-black hover:text-red-600'
+              href="#footer"
+              className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#footer')}
             >
               Contact Us
@@ -181,14 +181,14 @@ const Header = () => {
           </div>
 
           {/* Right Section */}
-          <div className='flex items-center space-x-4'>
+          <div className="flex items-center space-x-4">
             {/* Search Icon */}
             {/* <button className='hidden md:flex border border-red-500 text-red-500 rounded-full p-2'>
               <i className='fa fa-search'></i>
             </button> */}
 
             {/* Call to Action */}
-            <button className='btn-cubic hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg hover:rounded-lg'>
+            <button className="btn-cubic hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg hover:rounded-lg">
               Get in Touch
             </button>
 
@@ -201,14 +201,14 @@ const Header = () => {
               <i className='fa fa-bars'></i>
             </button> */}
             <div>
-              <nav className='relative flex items-center justify-between px-4 py-2 lg:hidden'>
+              <nav className="relative flex items-center justify-between px-4 py-2 lg:hidden">
                 {/* Hamburger Button */}
                 <button
-                  className='lg:hidden border border-red-500 text-red-500 rounded-full p-2 ml-1'
+                  className="lg:hidden border border-red-500 text-red-500 rounded-full p-2 ml-1"
                   style={{ marginRight: '5px' }}
                   onClick={toggleMenu}
                 >
-                  <i className='fa fa-bars'></i>
+                  <i className="fa fa-bars"></i>
                 </button>
 
                 {/* Full screen menu for mobile */}
@@ -217,29 +217,29 @@ const Header = () => {
                     menuOpen ? 'translate-x-0' : 'translate-x-full'
                   } lg:hidden fixed top-0 right-0 h-full w-4/5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out`}
                 >
-                  <div className='flex justify-between p-4 bg-red-600'>
-                    <Logo className='h-12 w-auto' />
+                  <div className="flex justify-between p-4 bg-red-600">
+                    <Logo className="h-12 w-auto" />
                     {/* Close Button */}
                     <button
                       onClick={toggleMenu}
-                      className='border border-white text-white rounded-full p-2'
+                      className="border border-white text-white rounded-full p-2"
                     >
-                      <i className='fa fa-times'></i>
+                      <i className="fa fa-times"></i>
                     </button>
                   </div>
-                  <ul className='flex flex-col space-y-4 p-4'>
+                  <ul className="flex flex-col space-y-4 p-4">
                     {['Home', 'About Us', 'Services', 'Our Team'].map(
                       (item, index) => (
                         <li key={index}>
                           <a
-                            href='#'
+                            href="#"
                             className={`relative inline-block text-xl overflow-hidden transition-colors duration-500 ease-in-out
               ${activeMenu === item ? 'text-red-500' : 'text-gray-500'}`}
                             onClick={() => handleClick(item)}
                           >
                             {/* Animated underline effect */}
                             <span
-                              className='relative z-10'
+                              className="relative z-10"
                               style={{
                                 position: 'relative',
                                 display: 'inline-block',
@@ -251,7 +251,7 @@ const Header = () => {
                             </span>
                             {/* Left-to-right red underline fill */}
                             <span
-                              className='absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transition-transform duration-500 ease-in-out'
+                              className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transition-transform duration-500 ease-in-out"
                               style={{
                                 transform:
                                   activeMenu === item
@@ -267,48 +267,48 @@ const Header = () => {
                   </ul>
 
                   {/* Mobile view "Get In Touch" section */}
-                  <div className='bg-white p-4 mt-4 border-t text-gray-500 text-xl'>
+                  <div className="bg-white p-4 mt-4 border-t text-gray-500 text-xl">
                     <div>
-                      <h3 className='text-lg font-semibold text-red-500'>
+                      <h3 className="text-lg font-semibold text-red-500">
                         Get In Touch
                       </h3>
-                      <ul className='mt-2'>
-                        <li className='flex items-center space-x-2'>
-                          <i className='fa fa-map-marker-alt text-red-500'></i>
+                      <ul className="mt-2">
+                        <li className="flex items-center space-x-2">
+                          <i className="fa fa-map-marker-alt text-red-500"></i>
                           <span>
                             789 Inner Lane, Holy park, California, USA
                           </span>
                         </li>
-                        <li className='flex items-center space-x-2 mt-2'>
-                          <i className='fa fa-phone text-red-500'></i>
+                        <li className="flex items-center space-x-2 mt-2">
+                          <i className="fa fa-phone text-red-500"></i>
                           <span>+01 234 567 890</span>
                         </li>
-                        <li className='flex items-center space-x-2 mt-2'>
-                          <i className='fa fa-envelope text-red-500'></i>
+                        <li className="flex items-center space-x-2 mt-2">
+                          <i className="fa fa-envelope text-red-500"></i>
                           <span>mailinfo00@techo.com</span>
                         </li>
                       </ul>
                     </div>
 
-                    <div className='mt-4'>
-                      <h3 className='text-lg font-semibold text-red-500'>
+                    <div className="mt-4">
+                      <h3 className="text-lg font-semibold text-red-500">
                         Subscribe Now
                       </h3>
-                      <div className='flex mt-2'>
+                      <div className="flex mt-2">
                         <input
-                          type='email'
-                          placeholder='Email Address'
-                          className='border p-2 rounded-l-lg w-full'
+                          type="email"
+                          placeholder="Email Address"
+                          className="border p-2 rounded-l-lg w-full"
                         />
-                        <button className='bg-gradient-to-r from-red-500 to-red-900 text-white px-4 rounded-r-lg'>
-                          <i className='fa fa-paper-plane'></i>
+                        <button className="bg-gradient-to-r from-red-500 to-red-900 text-white px-4 rounded-r-lg">
+                          <i className="fa fa-paper-plane"></i>
                         </button>
                       </div>
 
-                      <div className='flex space-x-4 mt-4'>
+                      <div className="flex space-x-4 mt-4">
                         {/* Facebook */}
                         <a
-                          href='#'
+                          href="#"
                           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 ${
                             activeIcon === 'facebook'
                               ? 'bg-white text-red-500'
@@ -316,12 +316,12 @@ const Header = () => {
                           } hover:bg-white hover:text-red-500`}
                           onClick={() => handleIconClick('facebook')}
                         >
-                          <i className='fab fa-facebook-f'></i>
+                          <i className="fab fa-facebook-f"></i>
                         </a>
 
                         {/* Instagram */}
                         <a
-                          href='#'
+                          href="#"
                           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 ${
                             activeIcon === 'instagram'
                               ? 'bg-white text-red-500'
@@ -329,12 +329,12 @@ const Header = () => {
                           } hover:bg-white hover:text-red-500`}
                           onClick={() => handleIconClick('instagram')}
                         >
-                          <i className='fab fa-instagram'></i>
+                          <i className="fab fa-instagram"></i>
                         </a>
 
                         {/* LinkedIn */}
                         <a
-                          href='#'
+                          href="#"
                           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 ${
                             activeIcon === 'linkedin'
                               ? 'bg-white text-red-500'
@@ -342,12 +342,12 @@ const Header = () => {
                           } hover:bg-white hover:text-red-500`}
                           onClick={() => handleIconClick('linkedin')}
                         >
-                          <i className='fab fa-linkedin'></i>
+                          <i className="fab fa-linkedin"></i>
                         </a>
 
                         {/* Telegram */}
                         <a
-                          href='#'
+                          href="#"
                           className={`w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 ${
                             activeIcon === 'telegram'
                               ? 'bg-white text-red-500'
@@ -355,7 +355,7 @@ const Header = () => {
                           } hover:bg-white hover:text-red-500`}
                           onClick={() => handleIconClick('telegram')}
                         >
-                          <i className='fab fa-telegram'></i>
+                          <i className="fab fa-telegram"></i>
                         </a>
                       </div>
                     </div>

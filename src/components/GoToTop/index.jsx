@@ -39,16 +39,16 @@ const ScrollToTopButton = () => {
   return (
     <>
       {isVisible && (
-        <div className='fixed bottom-6 right-6'>
+        <div className="fixed bottom-6 right-6 z-50">
           <div
-            className='relative cursor-pointer w-16 h-16 rounded-full flex items-center justify-center bg-white shadow-lg'
+            className="relative cursor-pointer w-16 h-16 rounded-full flex items-center justify-center bg-white shadow-lg hover:scale-105 transition-transform duration-300"
             onClick={scrollToTop}
             style={{
               background: `conic-gradient(red ${scrollPosition}%, #e0e0e0 ${scrollPosition}%)`,
             }}
           >
-            <div className='absolute inset-1 bg-white rounded-full flex items-center justify-center'>
-              <span className='text-red-500 text-lg'>↑</span>
+            <div className="absolute inset-1 bg-white rounded-full flex items-center justify-center">
+              <span className="text-red-500 text-lg">↑</span>
             </div>
           </div>
         </div>
