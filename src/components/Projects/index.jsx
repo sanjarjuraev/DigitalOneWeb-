@@ -9,7 +9,7 @@ import Icon5 from '/src/assets/bg-images/e-commerce.png';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import titleIconWhite from '/src/assets/icons/title-icons-white.png';
+import titleIcon from '/src/assets/icons/title_icons.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -49,20 +49,20 @@ const services = [
 
 const ProjectsSection = () => {
   return (
-    <section className='container mx-auto w-full justify-center items-center lg:max-w-[1450px]'>
-      <div className='text-center mb-10 items-center justify-center'>
-        <div className='flex gap-3 items-center justify-center text-shadow'>
+    <section className="container mx-auto w-full justify-center items-center lg:max-w-[1450px]">
+      <div className="text-center mb-10 items-center justify-center">
+        <div className="flex gap-3 items-center justify-center text-shadow bg-b">
           <span>
-            <img src={titleIconWhite} />
+            <img src={titleIcon} />
           </span>
-          <h4 className='uppercase tracking-wider font-bold text-white'>
+          <h4 className="uppercase tracking-wider font-bold text-red-500">
             Recent Works
           </h4>
           <span>
-            <img src={titleIconWhite} />
+            <img src={titleIcon} />
           </span>
         </div>
-        <h2 className='text-3xl md:text-4xl font-bold text-white'>
+        <h2 className="text-3xl md:text-4xl font-bold text-black">
           Latest Projects of Digital One
         </h2>
       </div>
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
             spaceBetween: 20,
           },
         }}
-        className='projects-slider'
+        className="projects-slider"
         style={{ overflow: 'visible' }}
       >
         {' '}
@@ -101,12 +101,12 @@ const ProjectsSection = () => {
             <Card item={service} key={service?.id} />
           </SwiperSlide>
         ))}
-        <div className='absolute right-10 -top-5 w-20'>
-          <div className='swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20'>
-            <i className='fas fa-chevron-right text-2xl hover:text-red-600'></i>
+        <div className="absolute right-10 -top-5 w-20">
+          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20">
+            <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
           </div>
-          <div className='swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20'>
-            <i className='fas fa-chevron-left text-2xl hover:text-red-600'></i>
+          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20">
+            <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
           </div>
         </div>
       </Swiper>
