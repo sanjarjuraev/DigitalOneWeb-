@@ -8,7 +8,7 @@ import Icon4 from '/src/assets/bg-images/erp-solutions.png';
 import Icon5 from '/src/assets/bg-images/e-commerce.png';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import {  Navigation } from 'swiper/modules';
 import titleIcon from '/src/assets/icons/title_icons.png';
 
 // Import Swiper styles
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        modules={[Pagination, Navigation]}
+        modules={[ Navigation]}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -102,10 +102,10 @@ const ProjectsSection = () => {
           </SwiperSlide>
         ))}
         <div className="absolute right-10 -top-5 w-20">
-          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20">
+          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
             <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
           </div>
-          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20">
+          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
             <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
           </div>
         </div>

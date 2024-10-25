@@ -51,7 +51,7 @@ const teamMembers = [
 const TeamSection = () => {
   return (
     <section>
-      <div className="text-center mb-10 items-center justify-center">
+      <div className="text-center mb-10 items-center justify-center team-text-bg">
         <div className="flex gap-3 items-center justify-center">
           <span>
             <img src={titleIcon} />

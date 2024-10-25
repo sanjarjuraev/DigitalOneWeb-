@@ -10,8 +10,11 @@ import Icon12 from '/src/assets/bg-images/ui-ux.jpg';
 import Icon13 from '/src/assets/bg-images/it-consulting.jpg';
 import Icon14 from '/src/assets/bg-images/web-dev.jpg';
 import Icon15 from '/src/assets/bg-images/database-security.jpg';
+import Icon16 from '/src/assets/bg-images/level-up.png';
 import titleIcon from '/src/assets/icons/title_icons.png';
-
+import ServiceCard from './ServiceCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {  Navigation } from 'swiper/modules'
 const services = [
   {
     id: 1,
@@ -48,6 +51,13 @@ const services = [
     description: 'Protect your data with security.',
     icon: Icon3,
   },
+  {
+    id: 6,
+    title: 'Level Up',
+    mainImg: Icon16,
+    description: 'We help to upgrade your skills and level.',
+    icon: Icon3,
+  },
 ];
 
 const ServicesSection = () => {
@@ -69,9 +79,70 @@ const ServicesSection = () => {
           We Provide Exclusive Service For Your Business
         </h2>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4'>
+      {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4'>
         {services.map((service) => (
-          <div
+          <ServiceCard key={service?.id} service={service} />
+       
+        ))}
+      </div> */}
+       <Swiper
+        slidesPerView={2}
+        spaceBetween={10}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        modules={[ Navigation]}
+        breakpoints={{
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        }}
+        className="projects-slider"
+        // style={{ overflow: 'visible' }}
+      >
+        {' '}
+        {services.map((service) => (
+          <SwiperSlide key={service?.id}>
+            <ServiceCard key={service?.id} service={service} />
+          </SwiperSlide>
+        ))}
+        <div className="absolute right-10 -top-5 w-20">
+          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+            <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
+          </div>
+          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+            <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
+          </div>
+        </div>
+      </Swiper>
+    </section>
+  );
+};
+
+export default ServicesSection;
+   {/* <div
             key={service.id}
             className='bg-white shadow-lg rounded-lg overflow-hidden card2'
           >
@@ -90,7 +161,6 @@ const ServicesSection = () => {
                 className='icon'
               />
             </div>
-            {/* Content below the image */}
             <div className='p-6 mt-4 '>
               <h3 className='text-xl font-semibold mb-2 text-black'>
                 {service.title}
@@ -103,11 +173,4 @@ const ServicesSection = () => {
                 Read More <span className='ml-2'>→</span>
               </a>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default ServicesSection;
+          </div> */}

@@ -52,7 +52,7 @@ const ServiceCards = () => {
       {services.map((service) => (
         <div
           key={service.id}
-          className='card text-black hover:text-white relative'
+          className='card text-black hover:text-white relative border-double '
         >
           {/* The hover mask */}
           <div className='card-mask'></div>

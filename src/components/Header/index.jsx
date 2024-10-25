@@ -227,7 +227,7 @@ const Header = () => {
                     </button>
                   </div>
                   <ul className="flex flex-col space-y-4 p-4">
-                    {['Home', 'About Us', 'Services', 'Our Team'].map(
+                    {['Home', 'About Us', 'Services', 'Our Team', 'Projects', 'Blogs'].map(
                       (item, index) => (
                         <li key={index}>
                           <a
@@ -266,7 +266,7 @@ const Header = () => {
                   </ul>
 
                   {/* Mobile view "Get In Touch" section */}
-                  <div className="bg-white p-4 mt-4 border-t text-gray-500 text-xl">
+                  <div className="bg-white p-4 mt-4 border-t text-gray-500 text-sm">
                     <div>
                       <h3 className="text-lg font-semibold text-red-500">
                         Get In Touch
@@ -274,8 +274,8 @@ const Header = () => {
                       <ul className="mt-2">
                         <li className="flex items-center space-x-2">
                           <i className="fa fa-map-marker-alt text-red-500"></i>
-                          <span>
-                            789 Inner Lane, Holy park, California, USA
+                          <span className='text-sm'>
+                            Chust 10A, Mirzo Ulugbek, Tashkent, Uzbekistan
                           </span>
                         </li>
                         <li className="flex items-center space-x-2 mt-2">
@@ -284,7 +284,7 @@ const Header = () => {
                         </li>
                         <li className="flex items-center space-x-2 mt-2">
                           <i className="fa fa-envelope text-red-500"></i>
-                          <span>mailinfo00@techo.com</span>
+                          <span>mailinfo00@digitalone.com</span>
                         </li>
                       </ul>
                     </div>

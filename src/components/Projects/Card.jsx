@@ -16,7 +16,7 @@ const Card = ({ item }) => {
           {/* Card content */}
           <div className="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
             <div>
-              <p className="text-sm text-blue-600">{item?.description}</p>
+              <p className="text-sm text-red-600">{item?.description}</p>
               <h3 className="text-xl font-semibold text-gray-800">
                 {item?.title}
               </h3>
