@@ -19,7 +19,7 @@ function App() {
       <section className="sticky top-0 z-50">
         <Header />
       </section>
-      <section id="home" className="hero-section section-hero">
+      <section id="home" className="hero-section section-hero ">
         <Hero />
       </section>
       <section className="relative container m-auto ">

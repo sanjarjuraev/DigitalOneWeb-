@@ -103,15 +103,14 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="absolute right-0 left-0 bg-white shadow-md z-30">
-        <div className="container mx-auto flex justify-between items-center lg:px-0">
+      <nav className="absolute desctop-nav right-0 left-0  shadow-md z-30">
+        <div className="container mx-auto flex justify-between items-center lg:px-0 bg-white">
           {/* Logo */}
           <div className="relative h-full flex items-center">
             <div
               className="relative  h-full p-4 px-8 flex items-center"
               style={{
-                backgroundImage:
-                  'linear-gradient(to right, white, #FFC0CB 4%, #FF6347 40%, #FF4500 65%, red)',
+                background: '#FF3E2A',
                 clipPath: 'polygon(0 0, 90% 0, 100% 100%, 0% 100%)', // Creates a slanted shape
               }}
             >
@@ -188,9 +187,9 @@ const Header = () => {
             </button> */}
 
             {/* Call to Action */}
-            <button className="btn-cubic hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg hover:rounded-lg">
+            {/* <button className="btn-cubic hidden md:flex bg-gradient-to-r from-red-500 to-red-900 text-white px-6 py-2 rounded-lg hover:rounded-lg">
               Get in Touch
-            </button>
+            </button> */}
 
             {/* Hamburger Menu for Mobile */}
             {/* <button
@@ -201,7 +200,7 @@ const Header = () => {
               <i className='fa fa-bars'></i>
             </button> */}
             <div>
-              <nav className="relative flex items-center justify-between px-4 py-2 lg:hidden">
+              <nav className="relative mobile-nav flex items-center justify-between px-4 py-2 lg:hidden">
                 {/* Hamburger Button */}
                 <button
                   className="lg:hidden border border-red-500 text-red-500 rounded-full p-2 ml-1"

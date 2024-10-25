@@ -164,46 +164,41 @@ import eRp from '/src/assets/bg-images/web-erp.png';
 
 const Hero = () => {
   return (
-    <section className="relative  text-gray-800 sm:pt-10 md:pt-20 lg:pt-40 xl:pt-60 lg:pb-40 sm:pb-20">
-      <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
+    <section className="relative text-gray-800 pt-28 sm:pt-20 xs:pt-40 md:pt-20 lg:pt-40  lg:pb-40 sm:pb-20">
+      <div className="container mx-auto px-6   flex flex-col md:flex-row items-center  gap-6">
         {/* Left Side: Text and Call to Action */}
-        <div className="w-full md:w-1/2">
-          <img
-            src="/path-to-your-logo.png"
-            alt="Digital One Logo"
-            className="w-32 mb-6"
-          />
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <div className="w-full md:w-1/2 opacity-100">
+          <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-4 text-black">
             Empowering Businesses with Innovative Tech Solutions
           </h1>
-          <p className="text-xl mb-6">
+          <p className="text-xl mb-4 md:mb-6">
             Specializing in Web Development, CRM, TMS, ERP, WMS, and E-commerce
             Solutions
           </p>
           <a
             href="#contact"
-            className="inline-block bg-red-600 text-white px-6 py-3 text-lg rounded-md hover:bg-red-700 transition"
+            className="inline-block bg-red-600 text-white px-2 py-1 md:px-6 md:py-3 text-lg rounded-md hover:bg-red-700 transition"
           >
-            Get Started
+            Get in touch
           </a>
         </div>
 
         {/* Right Side: Service Icons or Animation */}
         <div className="grid  gap-4  sm:grid-cols-1 mx-auto">
           {/* First and Second Columns */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 sm:grid-cols-1 items-end">
-            <div className="relative flex items-center justify-center  bg-gray-100 w-[200px] h-[175px] overflow-hidden rounded-lg shadow-md mx-auto">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 items-end">
+            <div className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px] overflow-hidden rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
               <img
                 src={webDev}
                 alt="Web Development"
-                className="bg-cover bg-center"
+                className="bg-cover bg-center w-full"
               />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>Web Development</p>
               </span>
             </div>
-            <div className="relative flex items-center justify-center  bg-gray-100 w-[200px] h-[200px]  rounded-lg shadow-md mx-auto overflow-hidden">
-              <img src={cRm} alt="CRM" className="bg-cover bg-center" />
+            <div className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto overflow-hidden border-double border-4 border-red-600">
+              <img src={cRm} alt="CRM" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>CRM</p>
               </span>
@@ -211,15 +206,15 @@ const Hero = () => {
           </div>
 
           {/* Third and Fourth Columns */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 sm:grid-cols-1 items-start justify-center">
-            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 w-[200px] h-[200px]  rounded-lg shadow-md mx-auto">
-              <img src={tMs} alt="TMS" className="bg-cover bg-center" />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 items-start justify-center">
+            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
+              <img src={tMs} alt="TMS" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>TMS</p>
               </span>
             </div>
-            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 w-[200px] h-[175px]  rounded-lg shadow-md mx-auto">
-              <img src={eRp} alt="ERP" className="bg-cover bg-center" />
+            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
+              <img src={eRp} alt="ERP" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>ERP</p>
               </span>
@@ -227,9 +222,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Optional background animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-200 to-transparent opacity-50"></div>
     </section>
   );
 };

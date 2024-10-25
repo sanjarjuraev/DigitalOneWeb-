@@ -56,6 +56,28 @@ p {
 }
 
 /* Sticky Header */
+.desctop-nav {
+  background: rgb(255, 37, 1);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 37, 1, 1) 0%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 37, 1, 1) 0%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 37, 1, 1) 0%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff2501",endColorstr="#ffffff",GradientType=1);
+}
 .sticky-header {
   position: sticky;
   top: 0;
@@ -76,13 +98,13 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
 }
 .section-footer {
-  background-image: url('/src/assets/bg-images/footer-bg.png');
+  /* background-image: url('/src/assets/bg-images/footer-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background: #000;
 }
 .section-about {
   padding-top: 20px;
@@ -98,10 +120,12 @@ p {
   background-position: center;
 }
 .section-pojects {
-  background-image: url('/src/assets/bg-images/team-bg21.png');
+  background: #fff;
+
+  /* background-image: url('/src/assets/bg-images/team-bg21.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 /* .inner-bg {
   background: rgba(255, 255, 255, 0.2);
