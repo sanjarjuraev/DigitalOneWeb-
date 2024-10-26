@@ -12,7 +12,7 @@ import TestimonialsSection from './components/Testimonials';
 import Footer from './components/Footer';
 import FooterBootom from './components/FooterBootom';
 import ScrollToTopButton from './components/GoToTop';
-
+import ServiceVertical from '/src/assets/bg-images/service-vertical.png';
 function App() {
   return (
     <div className="w-full">
@@ -33,6 +33,9 @@ function App() {
         className="relative section-service m-auto section-space"
       >
         <ServicesSection />
+        <div className="absolute right-0 top-0 hidden md:block">
+          <img src={ServiceVertical} />
+        </div>
       </section>
       <section
         id="team"
