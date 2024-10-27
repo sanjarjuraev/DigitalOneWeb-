@@ -79,12 +79,7 @@ const ServicesSection = () => {
           We Provide Exclusive Service For Your Business
         </h2>
       </div>
-      {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4'>
-        {services.map((service) => (
-          <ServiceCard key={service?.id} service={service} />
-       
-        ))}
-      </div> */}
+
        <Swiper
         slidesPerView={2}
         spaceBetween={10}
@@ -107,7 +102,7 @@ const ServicesSection = () => {
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 15,
           },
           1024: {
@@ -120,7 +115,6 @@ const ServicesSection = () => {
           },
         }}
         className="projects-slider"
-        // style={{ overflow: 'visible' }}
       >
         {' '}
         {services.map((service) => (
@@ -128,7 +122,7 @@ const ServicesSection = () => {
             <ServiceCard key={service?.id} service={service} />
           </SwiperSlide>
         ))}
-        <div className="absolute right-10 -top-5 w-20">
+        <div className="absolute right-10 top-0 md:-top-5 w-20">
           <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
             <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
           </div>
@@ -142,35 +136,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-   {/* <div
-            key={service.id}
-            className='bg-white shadow-lg rounded-lg overflow-hidden card2'
-          >
-            <div className='overflow-hidden   h-44 rounded-t-lg'>
-              <img
-                src={service.mainImg}
-                alt={service.title}
-                className='w-full h-48 object-cover main-image'
-              />
-            </div>
-
-            <div className='icon-container2'>
-              <img
-                src={service.icon}
-                alt={`${service.title} Icon`}
-                className='icon'
-              />
-            </div>
-            <div className='p-6 mt-4 '>
-              <h3 className='text-xl font-semibold mb-2 text-black'>
-                {service.title}
-              </h3>
-              <p className='text-gray-600 mb-4'>{service.description}</p>
-              <a
-                href='#'
-                className='text-pink-600 hover:text-red-500 font-semibold inline-flex items-center'
-              >
-                Read More <span className='ml-2'>→</span>
-              </a>
-            </div>
-          </div> */}
+   

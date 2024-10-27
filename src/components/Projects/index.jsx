@@ -88,6 +88,14 @@ const ProjectsSection = () => {
             spaceBetween: 15,
           },
           1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1180: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1200: {
             slidesPerView: 3,
             spaceBetween: 20,
           },
@@ -101,7 +109,7 @@ const ProjectsSection = () => {
             <Card item={service} key={service?.id} />
           </SwiperSlide>
         ))}
-        <div className="absolute right-10 -top-5 w-20">
+        <div className="absolute right-10 top-0 md:-top-5 w-20">
           <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
             <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
           </div>

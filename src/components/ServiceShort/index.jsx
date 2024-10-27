@@ -48,15 +48,15 @@ const services = [
 
 const ServiceCards = () => {
   return (
-    <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:px-4 px-10 lg:px-12 py-8 items-center justify-center lg:absolute lg:-top-40 lg:z-30'>
+    <div className='card-wrapper w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5  gap-3 xl:gap-8 md:px-4 px-10 lg:px-12 py-8 items-center justify-center lg:absolute lg:-top-40 lg:z-30'>
       {services.map((service) => (
         <div
           key={service.id}
-          className='card text-black hover:text-white relative border-double '
+          className='card text-black hover:text-white relative border-double m-auto '
         >
           {/* The hover mask */}
           <div className='card-mask'></div>
-          <div className='absolute inset-0 flex flex-col  justify-evenly p-5  z-20'>
+          <div className='absolute inset-0 flex flex-col  justify-start gap-4 p-5  z-20 card-child-wrapper'>
             <div className='icon-container'>
               <img
                 src={service.icon}

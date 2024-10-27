@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <div className="relative w-full ">
       {/* Top Header */}
-      <div className="bg-red-900 text-white text-sm py-3 hidden md:block">
+      <div className="bg-red-900 text-white text-sm py-3 hidden lg:block">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
             <span>

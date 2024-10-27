@@ -9,8 +9,8 @@ const Hero = () => {
     <section className="relative text-gray-800 pt-28 sm:pt-20 xs:pt-40 md:pt-20 lg:pt-40  lg:pb-40 sm:pb-20">
       <div className="container mx-auto px-6   flex flex-col md:flex-row items-center  gap-6">
         {/* Left Side: Text and Call to Action */}
-        <div className="w-full md:w-1/2 opacity-100">
-          <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-4 text-black">
+        <div className="w-full md:w-1/2 opacity-100 hero-text-wrapper">
+          <h1 className="text-2xl md:text-4xl lg:text-5lx xl:text-7lx font-bold leading-tight mb-4 text-black">
             Empowering Businesses with Innovative Tech Solutions
           </h1>
           <p className="text-xl mb-4 md:mb-6">

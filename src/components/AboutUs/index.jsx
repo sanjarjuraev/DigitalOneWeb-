@@ -83,58 +83,33 @@ const BusinessSuccessSection = () => {
           {/* Info Boxes */}
           <div className="space-y-4">
             {/* Problem Solving */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              {/* <div className='grid grid-cols-2 items-center space-x-2'>
-                <div
-                  className='bg-pink-200 flex items-center justify-center'
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: '100%',
-                    padding: 4,
-                  }}
-                >
-                  <img
-                    src={Icon2}
-                    alt='Mission & Vision'
-                    width={32}
-                    height={32}
-                  />
-                </div>
-                <div className='col-span-2'>
-                  <h4 className='text-lg font-semibold text-black'>
-                    Problem Solving
-                  </h4>
-                  <p className='text-gray-500'>
-                    Delivering swift, effective solutions.
-                  </p>
-                </div>
-              </div> */}
-              <div className="grid grid-cols-4 items-center gap-2">
-                <div
-                  className="bg-pink-200 flex items-center justify-center rounded-full"
-                  style={{
-                    width: '3rem', // 48px
-                    height: '3rem', // 48px
-                  }}
-                >
-                  <img
-                    src={Icon2}
-                    alt="Problem Solving"
-                    className="w-8 h-8" // 32px
-                  />
-                </div>
-                <div className="col-span-3">
-                  <h4 className="text-lg font-semibold text-black">
-                    Problem Solving
-                  </h4>
-                  <p className="text-gray-500">
-                    Delivering swift, effective solutions.
-                  </p>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            
+             <div className="flex items-center gap-2">
+  <div
+    className="bg-pink-200 flex items-center justify-center rounded-full"
+    style={{
+      width: '3rem', // 48px
+      height: '3rem', // 48px
+    }}
+  >
+    <img
+      src={Icon2}
+      alt="Problem Solving"
+      className="w-8 h-8" // 32px
+    />
+  </div>
+  <div className=" flex-1">
+    <h4 className="text-lg font-semibold text-black">
+      Problem Solving
+    </h4>
+    <p className="text-gray-500">
+      Delivering swift, effective solutions.
+    </p>
+  </div>
+</div>
               {/* Mission & Vision */}{' '}
-              <div className="grid grid-cols-4 items-center gap-2">
+              <div className="flex items-center gap-2">
                 <div
                   className="bg-pink-200 flex items-center justify-center rounded-full"
                   style={{
@@ -156,7 +131,7 @@ const BusinessSuccessSection = () => {
             </div>
 
             {/* Founder */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="flex items-center space-x-4 ">
                 <div className="bg-pink-200  rounded-full">
                   <img src={Avatar} alt="Founder" className="w-12 h-12" />
