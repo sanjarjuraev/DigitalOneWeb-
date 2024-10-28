@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import titleIcon from '/src/assets/icons/title_icons.png';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 
 const teamMembers = [
   {
@@ -61,36 +60,24 @@ const TeamSection = () => {
   const navigate = useNavigate();
 
   // Create refs and state to manage visibility of each member
-  const refs = useRef([]);
-  const [inViewStates, setInViewStates] = useState(
-    Array(teamMembers.length).fill(false)
-  );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const updatedInViewStates = refs.current.map((ref, index) => {
-        if (ref) {
-          const rect = ref.getBoundingClientRect();
-          return rect.top >= 0 && rect.bottom <= window.innerHeight;
-        }
-        return inViewStates[index];
-      });
-
-      setInViewStates(updatedInViewStates);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Initial check if elements are in view
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [inViewStates]);
 
   const handleClick = (slug) => {
     navigate(`/team/${slug}`);
+  };
+
+  const cardVariants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 0,
+      rotate: 0,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
   };
 
   return (
@@ -111,7 +98,12 @@ const TeamSection = () => {
           See Our Skilled Expert Team
         </h2>
       </div>
-      <div className="flex relative justify-center gap-8 flex-wrap mt-32 lg:max-w-[1175px] mx-auto overflow-x-visible h-[370px]">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        className="flex relative justify-center gap-8 flex-wrap mt-32 lg:max-w-[1175px] mx-auto overflow-x-visible h-[370px]"
+      >
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
@@ -142,15 +134,16 @@ const TeamSection = () => {
           loop={true}
           style={{ overflow: 'visible', width: '100%' }}
         >
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <SwiperSlide key={member.id}>
               <motion.div
-                ref={(el) => (refs.current[index] = el)}
+                // ref={(el) => (refs.current[index] = el)}
                 className="relative group overflow-visible shadow-lg profile-card"
                 style={{ width: '370px', height: '343px' }}
-                initial={{ opacity: 0, y: -50 }}
-                animate={inViewStates[index] ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                // initial={{ opacity: 0, y: 200 }}
+                // animate={inViewStates[index] ? { opacity: 1, y: 0 } : {}}
+                // transition={{ duration: 0.8, ease: 'easeInOut' }}
+                variants={cardVariants}
               >
                 <div className="profile-card2 absolute bottom-0">
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-transform duration-300">
@@ -175,7 +168,7 @@ const TeamSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 };

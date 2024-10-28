@@ -2,12 +2,34 @@ import { ReactComponent as Logo } from '../../assets/d1-extended.svg'; // Adjust
 import Blog1 from '/src/assets/bg-images/e-commerce.png';
 import Blog2 from '/src/assets/bg-images/erp-solutions.png';
 import './Footer.css';
+import { motion } from 'framer-motion';
+
 const Footer = () => {
+  const cardVariants = {
+    offscreen: {
+      y: 200,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'eseaIn',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
   return (
     <footer className="text-white ">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10 footer-bg">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
+        className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10 footer-bg"
+      >
         {/* Logo and Description */}
-        <div>
+        <motion.div variants={cardVariants}>
           <div className="mb-4">
             <Logo className="h-12 w-auto" />
           </div>
@@ -29,10 +51,10 @@ const Footer = () => {
               <i className="fab fa-youtube text-xl hover:text-red-400"></i>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Quick Links */}
-        <div>
+        <motion.div variants={cardVariants}>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
@@ -61,10 +83,10 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Recent Posts */}
-        <div>
+        <motion.div variants={cardVariants}>
           <h3 className="text-lg font-semibold mb-4">Recent Posts</h3>
           <ul className="space-y-4">
             <li className="flex items-center">
@@ -100,10 +122,10 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Contact Info */}
-        <div>
+        <motion.div variants={cardVariants}>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-2">
             <li>
@@ -145,8 +167,8 @@ const Footer = () => {
               </label>
             </div>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Footer Bottom */}
     </footer>

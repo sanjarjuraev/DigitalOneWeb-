@@ -1,9 +1,25 @@
 import PropTypes from 'prop-types';
 import './Projects.css';
+import { motion } from 'framer-motion';
 
 const Card = ({ item }) => {
+  const cardVariants = {
+    offscreen: {
+      y: 200,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'eseaIn',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
   return (
-    <div className="hover14 ">
+    <motion.div variants={cardVariants} className="hover14 ">
       <figure className="border-double border-4 border-red-600">
         <div
           className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 hover15"
@@ -27,7 +43,7 @@ const Card = ({ item }) => {
           </div>
         </div>
       </figure>
-    </div>
+    </motion.div>
   );
 };
 

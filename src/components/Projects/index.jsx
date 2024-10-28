@@ -8,8 +8,9 @@ import Icon4 from '/src/assets/bg-images/erp-solutions.png';
 import Icon5 from '/src/assets/bg-images/e-commerce.png';
 import Card from './Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {  Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import titleIcon from '/src/assets/icons/title_icons.png';
+import { motion } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -66,58 +67,65 @@ const ProjectsSection = () => {
           Latest Projects of Digital One
         </h2>
       </div>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={10}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        modules={[ Navigation]}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1180: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-        className="projects-slider"
-        style={{ overflow: 'visible' }}
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
       >
         {' '}
-        {services.map((service) => (
-          <SwiperSlide key={service?.id}>
-            <Card item={service} key={service?.id} />
-          </SwiperSlide>
-        ))}
-        <div className="absolute right-10 top-0 md:-top-5 w-20">
-          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
-            <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={10}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1180: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+          className="projects-slider"
+          style={{ overflow: 'visible' }}
+        >
+          {' '}
+          {services.map((service) => (
+            <SwiperSlide key={service?.id}>
+              <Card item={service} key={service?.id} />
+            </SwiperSlide>
+          ))}
+          <div className="absolute right-10 top-0 md:-top-5 w-20">
+            <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+              <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
+            </div>
+            <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+              <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
+            </div>
           </div>
-          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
-            <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
-          </div>
-        </div>
-      </Swiper>
+        </Swiper>
+      </motion.div>
     </section>
   );
 };

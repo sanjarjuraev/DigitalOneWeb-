@@ -14,7 +14,9 @@ import Icon16 from '/src/assets/bg-images/level-up.png';
 import titleIcon from '/src/assets/icons/title_icons.png';
 import ServiceCard from './ServiceCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {  Navigation } from 'swiper/modules'
+import { Navigation } from 'swiper/modules';
+import { motion } from 'framer-motion';
+
 const services = [
   {
     id: 1,
@@ -62,78 +64,82 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className='container mx-auto w-full justify-center items-center'>
-      <div className='text-center mb-10 items-center justify-center'>
-        <div className='flex gap-3 items-center justify-center text-shadow'>
+    <section className="container mx-auto w-full justify-center items-center">
+      <div className="text-center mb-10 items-center justify-center">
+        <div className="flex gap-3 items-center justify-center text-shadow">
           <span>
             <img src={titleIcon} />
           </span>
-          <h4 className='text-red-600 uppercase tracking-wider font-bold'>
+          <h4 className="text-red-600 uppercase tracking-wider font-bold">
             Our Feathered Services
           </h4>
           <span>
             <img src={titleIcon} />
           </span>
         </div>
-        <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           We Provide Exclusive Service For Your Business
         </h2>
       </div>
-
-       <Swiper
-        slidesPerView={2}
-        spaceBetween={10}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        modules={[ Navigation]}
-        breakpoints={{
-          576: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1200: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
-        }}
-        className="projects-slider"
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.5 }}
       >
-        {' '}
-        {services.map((service) => (
-          <SwiperSlide key={service?.id}>
-            <ServiceCard key={service?.id} service={service} />
-          </SwiperSlide>
-        ))}
-        <div className="absolute right-10 top-0 md:-top-5 w-20">
-          <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
-            <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={10}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Navigation]}
+          breakpoints={{
+            576: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          }}
+          className="projects-slider"
+        >
+          {' '}
+          {services.map((service) => (
+            <SwiperSlide key={service?.id}>
+              <ServiceCard key={service?.id} service={service} />
+            </SwiperSlide>
+          ))}
+          <div className="absolute right-10 top-0 md:-top-5 w-20">
+            <div className="swiper-button-next a top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+              <i className="fas fa-chevron-right text-2xl hover:text-red-600"></i>
+            </div>
+            <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
+              <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
+            </div>
           </div>
-          <div className="swiper-button-prev  top-1/2 transform -translate-y-1/2 text-red-500 z-20">
-            <i className="fas fa-chevron-left text-2xl hover:text-red-600"></i>
-          </div>
-        </div>
-      </Swiper>
+        </Swiper>
+      </motion.div>
     </section>
   );
 };
 
 export default ServicesSection;
-   
