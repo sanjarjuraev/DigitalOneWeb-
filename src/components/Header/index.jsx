@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { ReactComponent as Logo } from '/src/assets/d1-extended.svg'; // Adjust the path as needed
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeIcon, setActiveIcon] = useState(null);
@@ -22,7 +24,7 @@ const Header = () => {
     let menuItem =
       target?.substring(1)?.charAt(0)?.toUpperCase() + target?.substring(2);
     setActiveMenu(menuItem);
-
+    navigate('/', { state: { scrollToSection: target } });
     const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
@@ -41,7 +43,9 @@ const Header = () => {
               <i className="fa fa-envelope"></i> info@example.com
             </span>
             <span>
-              <i className="fa fa-phone"></i> +208-666-0112
+              <a href="tel:+998940250121" className="text-white">
+                <i className="fa fa-phone"></i> +998 94 025 01 21
+              </a>
             </span>
           </div>
           <div className="flex space-x-4">
@@ -227,42 +231,45 @@ const Header = () => {
                     </button>
                   </div>
                   <ul className="flex flex-col space-y-4 p-4">
-                    {['Home', 'About Us', 'Services', 'Our Team', 'Projects', 'Blogs'].map(
-                      (item, index) => (
-                        <li key={index}>
-                          <a
-                            href="#"
-                            className={`relative inline-block text-xl overflow-hidden transition-colors duration-500 ease-in-out
+                    {[
+                      'Home',
+                      'About Us',
+                      'Services',
+                      'Our Team',
+                      'Projects',
+                      'Blogs',
+                    ].map((item, index) => (
+                      <li key={index}>
+                        <a
+                          href="#"
+                          className={`relative inline-block text-xl overflow-hidden transition-colors duration-500 ease-in-out
               ${activeMenu === item ? 'text-red-500' : 'text-gray-500'}`}
-                            onClick={() => handleClick(item)}
+                          onClick={() => handleClick(item)}
+                        >
+                          {/* Animated underline effect */}
+                          <span
+                            className="relative z-10"
+                            style={{
+                              position: 'relative',
+                              display: 'inline-block',
+                              padding: '0 0.2rem',
+                              transition: 'color 0.5s',
+                            }}
                           >
-                            {/* Animated underline effect */}
-                            <span
-                              className="relative z-10"
-                              style={{
-                                position: 'relative',
-                                display: 'inline-block',
-                                padding: '0 0.2rem',
-                                transition: 'color 0.5s',
-                              }}
-                            >
-                              {item}
-                            </span>
-                            {/* Left-to-right red underline fill */}
-                            <span
-                              className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transition-transform duration-500 ease-in-out"
-                              style={{
-                                transform:
-                                  activeMenu === item
-                                    ? 'scaleX(1)'
-                                    : 'scaleX(0)',
-                                transformOrigin: 'left',
-                              }}
-                            />
-                          </a>
-                        </li>
-                      )
-                    )}
+                            {item}
+                          </span>
+                          {/* Left-to-right red underline fill */}
+                          <span
+                            className="absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transition-transform duration-500 ease-in-out"
+                            style={{
+                              transform:
+                                activeMenu === item ? 'scaleX(1)' : 'scaleX(0)',
+                              transformOrigin: 'left',
+                            }}
+                          />
+                        </a>
+                      </li>
+                    ))}
                   </ul>
 
                   {/* Mobile view "Get In Touch" section */}
@@ -274,7 +281,7 @@ const Header = () => {
                       <ul className="mt-2">
                         <li className="flex items-center space-x-2">
                           <i className="fa fa-map-marker-alt text-red-500"></i>
-                          <span className='text-sm'>
+                          <span className="text-sm">
                             Chust 10A, Mirzo Ulugbek, Tashkent, Uzbekistan
                           </span>
                         </li>
