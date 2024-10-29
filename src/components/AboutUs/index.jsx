@@ -9,6 +9,7 @@ import aboutTumb2 from '/src/assets/bg-images/aboutThumb1_2.webp';
 import titleIcon from '/src/assets/icons/title_icons.png';
 // import Logo2 from '/src/assets/icons/D112.png';
 import { ReactComponent as Logo } from '/src/assets/D112.svg'; // Adjust the path as needed
+import { motion } from 'framer-motion';
 
 import './About.css';
 const BusinessSuccessSection = () => {
@@ -19,7 +20,17 @@ const BusinessSuccessSection = () => {
         <div className="relative lg:order-1 order-1">
           {/* Large Image */}
           <div className="relative">
-            <img
+            <motion.img
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1 },
+              }}
+              viewport={{ once: true }}
               src={aboutTumb1}
               alt="Team working"
               className="rounded-lg"
@@ -38,7 +49,19 @@ const BusinessSuccessSection = () => {
             </div>
             {/* Small Video Box */}
             <div className="absolute bottom-3 right-2 lg:bottom-8 lg:right-5">
-              <div className="relative border-4 border-white rounded-lg">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  x: -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1, delay: 0.8 },
+                }}
+                viewport={{ once: true }}
+                className="relative border-4 border-white rounded-lg"
+              >
                 <img
                   src={aboutTumb2}
                   alt="Meeting"
@@ -49,7 +72,7 @@ const BusinessSuccessSection = () => {
                     <i className="fas fa-play-circle"></i>
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="absolute top-3 right-2 lg:top-8 lg:right-5 w-8 h-8 z-20 movingY hidden lg:block">
               <Logo width="80px" height="80px" />
@@ -71,45 +94,68 @@ const BusinessSuccessSection = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-black">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-3xl lg:text-4xl font-bold mb-6 text-black"
+          >
             We Are Increasing Business Success With Technology
-          </h2>
-          <p className="text-gray-600 mb-8">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-gray-600 mb-8"
+          >
             Harnessing cutting-edge technology and innovative solutions, we help
             businesses optimize their operations, boost efficiency, and achieve
             sustainable growth in today&#39;s digital landscape.
-          </p>
+          </motion.p>
 
           {/* Info Boxes */}
           <div className="space-y-4">
             {/* Problem Solving */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            
-             <div className="flex items-center gap-2">
-  <div
-    className="bg-pink-200 flex items-center justify-center rounded-full"
-    style={{
-      width: '3rem', // 48px
-      height: '3rem', // 48px
-    }}
-  >
-    <img
-      src={Icon2}
-      alt="Problem Solving"
-      className="w-8 h-8" // 32px
-    />
-  </div>
-  <div className=" flex-1">
-    <h4 className="text-lg font-semibold text-black">
-      Problem Solving
-    </h4>
-    <p className="text-gray-500">
-      Delivering swift, effective solutions.
-    </p>
-  </div>
-</div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2"
+              >
+                <div
+                  className="bg-pink-200 flex items-center justify-center rounded-full"
+                  style={{
+                    width: '3rem', // 48px
+                    height: '3rem', // 48px
+                  }}
+                >
+                  <img
+                    src={Icon2}
+                    alt="Problem Solving"
+                    className="w-8 h-8" // 32px
+                  />
+                </div>
+                <div className=" flex-1">
+                  <h4 className="text-lg font-semibold text-black">
+                    Problem Solving
+                  </h4>
+                  <p className="text-gray-500">
+                    Delivering swift, effective solutions.
+                  </p>
+                </div>
+              </motion.div>
               {/* Mission & Vision */}{' '}
-              <div className="flex items-center gap-2">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2"
+              >
                 <div
                   className="bg-pink-200 flex items-center justify-center rounded-full"
                   style={{
@@ -119,7 +165,7 @@ const BusinessSuccessSection = () => {
                 >
                   <img src={Icon3} alt="Mission & Vision" className="w-8 h-8" />
                 </div>
-                <div className="col-span-3">
+                <div className="flex-1">
                   <h4 className="text-lg font-semibold text-black">
                     Mission & Vision
                   </h4>
@@ -127,12 +173,18 @@ const BusinessSuccessSection = () => {
                     Driving innovation for a sustainable future.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Founder */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className="flex items-center space-x-4 ">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-4 "
+              >
                 <div className="bg-pink-200  rounded-full">
                   <img src={Avatar} alt="Founder" className="w-12 h-12" />
                 </div>
@@ -142,16 +194,22 @@ const BusinessSuccessSection = () => {
                   </h4>
                   <p className="text-gray-500">Co-Founder</p>
                 </div>
-              </div>
+              </motion.div>
               {/* Call to Action Button */}
-              <div className="flex items-center justify-start space-x-4 mb-5 sm:mb-0">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-start space-x-4 mb-5 sm:mb-0"
+              >
                 <a
                   href="#contact"
                   className="inline-block bg-red-600 text-white px-2 py-1 md:px-4 md:py-2 text-md rounded-md hover:bg-red-700 transition"
                 >
                   Get in touch
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

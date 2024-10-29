@@ -12,19 +12,34 @@ const Hero = () => {
       <div className="container mx-auto px-6   flex flex-col md:flex-row items-center  gap-6">
         {/* Left Side: Text and Call to Action */}
         <div className="w-full md:w-1/2 opacity-100 hero-text-wrapper">
-          <h1 className="text-2xl md:text-4xl lg:text-5lx xl:text-7lx font-bold leading-tight mb-4 text-black">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-4xl lg:text-5lx xl:text-6xl font-bold leading-tight mb-4 text-black"
+          >
             Empowering Businesses with Innovative Tech Solutions
-          </h1>
-          <p className="text-xl mb-4 md:mb-6">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-xl mb-4 md:mb-6"
+          >
             Specializing in Web Development, CRM, TMS, ERP, WMS, and E-commerce
             Solutions
-          </p>
-          <a
-            href="#contact"
-            className="inline-block bg-red-600 text-white px-2 py-1 md:px-6 md:py-3 text-lg rounded-md hover:bg-red-700 transition"
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-all"
           >
             Get in touch
-          </a>
+          </motion.button>
         </div>
 
         {/* Right Side: Service Icons or Animation */}
