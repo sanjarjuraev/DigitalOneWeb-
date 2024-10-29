@@ -8,6 +8,7 @@ import Icon4 from '/src/assets/icons/serviceIcon1_4.png';
 import Icon5 from '/src/assets/icons/team-group.png';
 import './ServiceShort.css';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 const services = [
   {
@@ -47,33 +48,36 @@ const services = [
 ];
 
 const ServiceCards = () => {
-  const cardVariants = {
-    offscreen: {
-      y: 200,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        bounce: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <motion.div
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.5 }}
-      className="card-wrapper w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 xl:gap-8 md:px-4 px-10 lg:px-12 py-8 items-center justify-center lg:absolute lg:-top-40 lg:z-30"
-    >
-      {services.map((service) => (
+    <motion.div className="card-wrapper w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 xl:gap-8 md:px-4 px-10 lg:px-12 py-8 items-center justify-center lg:absolute lg:-top-40 lg:z-30">
+      {services.map((service, index) => (
         <motion.div
           key={service.id}
-          variants={cardVariants}
+          initial={
+            isMobile
+              ? {
+                  opacity: 0,
+                  // Slide from right if index is odd, else from left
+                  x: index % 2 === 0 ? 50 : -50,
+                }
+              : { opacity: 0, y: 150 }
+          }
+          whileInView={
+            isMobile
+              ? {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1 },
+                }
+              : {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1 },
+                }
+          }
+          viewport={{ once: true }}
           className="card text-black hover:text-white relative border-double m-auto"
         >
           {/* The hover mask */}

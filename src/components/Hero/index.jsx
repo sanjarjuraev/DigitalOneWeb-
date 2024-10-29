@@ -1,8 +1,8 @@
-
 import webDev from '/src/assets/bg-images/web-dev1.png';
 import cRm from '/src/assets/bg-images/web-crm.png';
 import tMs from '/src/assets/bg-images/web-tms.png';
 import eRp from '/src/assets/bg-images/web-erp.png';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -29,7 +29,23 @@ const Hero = () => {
         <div className="grid  gap-4  sm:grid-cols-1 mx-auto">
           {/* First and Second Columns */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 items-end">
-            <div className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px] overflow-hidden rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
+            <motion.div
+              initial={{
+                rotate: -90,
+                x: 0,
+                y: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                rotate: 0,
+                y: 0,
+                x: 0,
+                opacity: 1,
+                transition: { duration: 1 },
+              }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px] overflow-hidden rounded-lg shadow-md mx-auto border-double border-4 border-red-600"
+            >
               <img
                 src={webDev}
                 alt="Web Development"
@@ -38,29 +54,77 @@ const Hero = () => {
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>Web Development</p>
               </span>
-            </div>
-            <div className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto overflow-hidden border-double border-4 border-red-600">
+            </motion.div>
+            <motion.div
+              initial={{
+                rotate: 90,
+                x: 0,
+                y: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                rotate: 0,
+                y: 0,
+                x: 0,
+                opacity: 1,
+                transition: { duration: 1, delay: 0.8 },
+              }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto overflow-hidden border-double border-4 border-red-600"
+            >
               <img src={cRm} alt="CRM" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>CRM</p>
               </span>
-            </div>
+            </motion.div>
           </div>
 
           {/* Third and Fourth Columns */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 sm:grid-cols-1 items-start justify-center">
-            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
+            <motion.div
+              initial={{
+                rotate: 90,
+                x: 0,
+                y: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                rotate: 0,
+                y: 0,
+                x: 0,
+                opacity: 1,
+                transition: { duration: 1, delay: 1.5 },
+              }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[200px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600"
+            >
               <img src={tMs} alt="TMS" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>TMS</p>
               </span>
-            </div>
-            <div className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600">
+            </motion.div>
+            <motion.div
+              initial={{
+                rotate: -90,
+                x: 0,
+                y: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                rotate: 0,
+                y: 0,
+                x: 0,
+                opacity: 1,
+                transition: { duration: 1, delay: 1 },
+              }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center overflow-hidden  bg-gray-100 md:w-[200px] md:h-[175px] w-[300px] h-[300px]  rounded-lg shadow-md mx-auto border-double border-4 border-red-600"
+            >
               <img src={eRp} alt="ERP" className="bg-cover bg-center w-full" />
               <span className="absolute bottom-4 text-center bg-red-700 py-1 px-2 rounded text-white">
                 <p>ERP</p>
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
