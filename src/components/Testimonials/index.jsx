@@ -7,6 +7,8 @@ import './Testimonials.css';
 import titleIcon from '/src/assets/icons/title_icons.png';
 import User1 from '/src/assets/bg-images/testiThumb1_1.webp';
 import User2 from '/src/assets/bg-images/testiThumb1_2.webp';
+import { motion } from 'framer-motion';
+
 const testimonials = [
   {
     id: 1,
@@ -48,25 +50,31 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className='container mx-auto lg:max-w-[1300px] overlow-hidden'>
-      <div className='text-center mb-10 items-center justify-center'>
-        <div className='flex gap-3 items-center justify-center text-shadow'>
+    <section className="container mx-auto lg:max-w-[1300px] overlow-hidden">
+      <div className="text-center mb-10 items-center justify-center">
+        <div className="flex gap-3 items-center justify-center text-shadow">
           <span>
             <img src={titleIcon} />
           </span>
-          <h4 className='uppercase tracking-wider font-bold text-red-500'>
+          <h4 className="uppercase tracking-wider font-bold text-red-500">
             Testimonials
           </h4>
           <span>
             <img src={titleIcon} />
           </span>
         </div>
-        <h2 className='text-3xl md:text-4xl font-bold text-black'>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-black"
+        >
           What Happy Clients Say About Us?
-        </h2>
+        </motion.h2>
       </div>
       {/* Swiper Section */}
-      <div className='items-center justify-center mx-auto overflow-hidden'>
+      <div className="items-center justify-center mx-auto overflow-hidden">
         <Swiper
           slidesPerView={1} /* Default for mobile view */
           spaceBetween={20} /* Default space */
@@ -88,7 +96,7 @@ const TestimonialsSection = () => {
             clickable: true,
           }}
           modules={[Pagination, Navigation, Autoplay]}
-          className='testimonial-swiper'
+          className="testimonial-swiper"
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -99,50 +107,50 @@ const TestimonialsSection = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className='flex flex-col lg:flex-row items-center justify-center p-6 bg-white rounded-xl shadow-lg relative max-w-full'>
-                <div className='lg:w-1/3 p-4 text-center'>
+              <div className="flex flex-col lg:flex-row items-center justify-center p-6 bg-white rounded-xl shadow-lg relative max-w-full">
+                <div className="lg:w-1/3 p-4 text-center">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className='w-24 h-24 rounded-full mx-auto mb-4'
+                    className="w-24 h-24 rounded-full mx-auto mb-4"
                   />
-                  <h3 className='text-xl font-semibold'>{testimonial.name}</h3>
-                  <p className='text-sm text-gray-500'>{testimonial.role}</p>
-                  <div className='flex justify-center mt-2'>
+                  <h3 className="text-xl font-semibold">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <div className="flex justify-center mt-2">
                     {Array(testimonial.rating)
                       .fill(0)
                       .map((_, index) => (
-                        <span key={index} className='text-orange-400 text-xl'>
+                        <span key={index} className="text-orange-400 text-xl">
                           ★
                         </span>
                       ))}
                   </div>
                 </div>
-                <div className='lg:w-2/3 p-4'>
-                  <p className='text-gray-600 text-left'>{testimonial.quote}</p>
+                <div className="lg:w-2/3 p-4">
+                  <p className="text-gray-600 text-left">{testimonial.quote}</p>
                 </div>
               </div>
             </SwiperSlide>
           ))}{' '}
-          <div className='absolute  -top-20  left-10'>
-            <div className='testimonials swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20'>
-              <i className='fas fa-chevron-left text-2xl text-red-500 hover:text-red-600'></i>
+          <div className="absolute  -top-20  left-10">
+            <div className="testimonials swiper-button-prev  top-1/2 transform -translate-y-1/2 text-white z-20">
+              <i className="fas fa-chevron-left text-2xl text-red-500 hover:text-red-600"></i>
             </div>
-            <div className='testimonials swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20 '>
-              <i className='fas fa-chevron-right text-2xl text-red-500 hover:text-red-600'></i>
+            <div className="testimonials swiper-button-next a top-1/2 transform -translate-y-1/2 text-white z-20 ">
+              <i className="fas fa-chevron-right text-2xl text-red-500 hover:text-red-600"></i>
             </div>
           </div>
           {/* Pagination Dots */}
-          <div className='absolute right-2 top-28 w-20'>
-            <div className='swiper-pagination absolute bottom-4 right-4 z-20 text-red-500'></div>
+          <div className="absolute right-2 top-28 w-20">
+            <div className="swiper-pagination absolute bottom-4 right-4 z-20 text-red-500"></div>
           </div>
         </Swiper>
       </div>
 
-      <div className='text-center mt-8'>
+      <div className="text-center mt-8">
         <a
-          href='/testimonials'
-          className='inline-block bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition duration-300'
+          href="/testimonials"
+          className="inline-block bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition duration-300"
         >
           See All Testimonials
         </a>

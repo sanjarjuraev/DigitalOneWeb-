@@ -31,15 +31,16 @@ const Hero = () => {
             Specializing in Web Development, CRM, TMS, ERP, WMS, and E-commerce
             Solutions
           </motion.p>
-          <motion.button
+          <motion.a
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             viewport={{ once: true }}
             className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-all"
+            href="#footer"
           >
             Get in touch
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Right Side: Service Icons or Animation */}

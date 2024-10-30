@@ -39,14 +39,14 @@ p {
     padding-top: var(--section-space-mobile);
     padding-bottom: var(--section-space-mobile);
   }
-    .hero-text-wrapper{
-    background: rgba( 255, 255, 255, 0.3 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
--webkit-backdrop-filter: blur( 4px );
-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-padding:3px 4px;
+  .hero-text-wrapper {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3px 4px;
   }
 }
 
@@ -55,15 +55,14 @@ padding:3px 4px;
     padding-top: var(--section-space-mobile);
     padding-bottom: var(--section-space-mobile);
   }
-    .hero-text-wrapper{
-    background: rgba( 255, 255, 255, 0.3 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
--webkit-backdrop-filter: blur( 4px );
-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-padding:3px 4px;
-
+  .hero-text-wrapper {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3px 4px;
   }
 }
 
@@ -114,6 +113,12 @@ padding:3px 4px;
 /* Footer Background */
 .section-hero {
   background-image: url('/src/assets/bg-images/hero-banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blog-header {
+  background-image: url('/src/assets/bg-images/blog-header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

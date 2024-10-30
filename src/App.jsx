@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
@@ -16,6 +16,7 @@ import ScrollToTopButton from './components/GoToTop';
 import PrivacyPolicy from './components/Policy';
 import ServiceVertical from '/src/assets/bg-images/service-vertical.png';
 import TeamDetailed from './components/Team/TeamDetailed';
+import BlogPage from './components/Blog';
 
 function App() {
   const location = useLocation();
@@ -98,7 +99,10 @@ function App() {
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/team/:name" element={<TeamDetailed />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<TeamDetailed />} />
       </Routes>
+      <Outlet />
     </div>
   );
 }

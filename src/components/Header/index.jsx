@@ -10,6 +10,9 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeIcon, setActiveIcon] = useState(null);
   const handleClick = (menu) => {
+    if (menu === 'Blog') {
+      navigate(`/blog`);
+    }
     setActiveMenu(menu);
   };
   const toggleMenu = () => {
@@ -24,7 +27,15 @@ const Header = () => {
     let menuItem =
       target?.substring(1)?.charAt(0)?.toUpperCase() + target?.substring(2);
     setActiveMenu(menuItem);
-    navigate('/', { state: { scrollToSection: target } });
+    console.log(menuItem, 'menuitem');
+
+    if (menuItem === 'Blog') {
+      console.log('here,...');
+
+      navigate('/blog');
+    } else {
+      navigate('/', { state: { scrollToSection: target } });
+    }
     const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
@@ -168,7 +179,7 @@ const Header = () => {
               Pojects
             </a>
             <a
-              href="#blog"
+              href="#"
               className="text-black hover:text-red-600"
               onClick={(e) => smoothScroll(e, '#blog')}
             >

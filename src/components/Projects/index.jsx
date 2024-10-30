@@ -63,9 +63,15 @@ const ProjectsSection = () => {
             <img src={titleIcon} />
           </span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-black">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-black"
+        >
           Latest Projects of Digital One
-        </h2>
+        </motion.h2>
       </div>
       <motion.div
         initial="offscreen"

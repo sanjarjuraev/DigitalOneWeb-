@@ -39,9 +39,23 @@ const teamMembers = [
       },
     ],
     experience: [
-      'Senior Frontend Engineer at Digital One LLC and CargoPrime Corp. (08/2022 - Present): Led a team to develop a high-performance single-page application using NextJS and React, reducing load times by 30%. Implemented responsive design, boosting engagement by 25%, and optimized web application performance by 20% using advanced JavaScript techniques.',
-      'Middle Frontend Engineer at Digital One LLC and CargoPrime Corp. (08/2021 - 08/2022): Collaborated with design teams to integrate user interfaces, boosting user satisfaction by 20%. Engineered complex web systems, increased customer conversions by 12%, and initiated a project for code modularity that cut development costs by 15%.',
-      'Web Developer (Freelance, 02/2020 - 08/2021): Improved website performance by 30% for a client portfolio of 20 clients, developed a responsive website for OXUS University, and implemented SEO best practices for getcv.uz, resulting in a significant boost in visitor engagement.',
+      {
+        experience:
+          'Senior Frontend Engineer at Digital One LLC and CargoPrime Corp. (08/2022 - Present)',
+        details:
+          'Led a team to develop a high-performance single-page application using NextJS and React, reducing load times by 30%. Implemented responsive design, boosting engagement by 25%, and optimized web application performance by 20% using advanced JavaScript techniques.',
+      },
+      {
+        experience:
+          'Middle Frontend Engineer at Digital One LLC and CargoPrime Corp. (08/2021 - 08/2022)',
+        details:
+          'Collaborated with design teams to integrate user interfaces, boosting user satisfaction by 20%. Engineered complex web systems, increased customer conversions by 12%, and initiated a project for code modularity that cut development costs by 15%.',
+      },
+      {
+        experience: 'Web Developer (Freelance, 02/2020 - 08/2021)',
+        details:
+          'Improved website performance by 30% for a client portfolio of 20 clients, developed a responsive website for OXUS University, and implemented SEO best practices for getcv.uz, resulting in a significant boost in visitor engagement.',
+      },
     ],
     projects: [
       'Major application redesign that reduced load times by 30%',
@@ -116,7 +130,25 @@ const TeamDetailed = () => {
               {Object.entries(skillCategory).map(([category, skills]) => {
                 const averagePercentage = calculateAveragePercentage(skills);
                 return (
-                  <div key={category} className="mb-6">
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      scale: 0.3,
+                      filter: 'blur(20px)',
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                      filter: 'blur(0px)',
+                    }}
+                    transition={{
+                      duration: 1,
+                      delay: 0.15, // Add delay directly here if needed
+                    }}
+                    viewport={{ once: true }}
+                    key={category}
+                    className="mb-6"
+                  >
                     <div
                       className="flex items-center cursor-pointer"
                       onClick={() => toggleSection(category)}
@@ -157,7 +189,7 @@ const TeamDetailed = () => {
                         ))}
                       </ul>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -174,8 +206,9 @@ const TeamDetailed = () => {
           <h3 className="text-xl font-semibold mb-2">Experience:</h3>
           <ul className="list-disc ml-5">
             {member.experience.map((exp, index) => (
-              <li key={index} className="text-md">
-                {exp}
+              <li key={index} className="text-md mt-2">
+                <span className="font-bold">{exp?.experience}</span>
+                <p>{exp?.details}</p>
               </li>
             ))}
           </ul>
