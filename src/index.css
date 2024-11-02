@@ -117,8 +117,33 @@ p {
   background-size: cover;
   background-position: center;
 }
+header{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  text-align: center;
+  justify-content: center;
+  margin:auto;
+  padding: auto;
+}
+.header-title{
+  margin:auto;
+  padding:10px;
+  backdrop-filter: blur(6px) saturate(154%);
+  -webkit-backdrop-filter: blur(6px) saturate(154%);
+  background-color: rgba(1, 1, 1, 0.61);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  width:max-content;
+}
 .blog-header {
   background-image: url('/src/assets/bg-images/blog-header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blog-header-tms{
+  background-image: url('/src/assets/bg-images/blog-header-tms.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

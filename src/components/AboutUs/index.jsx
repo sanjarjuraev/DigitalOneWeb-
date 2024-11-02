@@ -190,7 +190,7 @@ const BusinessSuccessSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-black">
-                    Saydullo To&#39;xtasinov
+                    Saydullo Toshtanov
                   </h4>
                   <p className="text-gray-500">Co-Founder</p>
                 </div>
@@ -204,7 +204,7 @@ const BusinessSuccessSection = () => {
                 className="flex items-center justify-start space-x-4 mb-5 sm:mb-0"
               >
                 <a
-                  href="#contact"
+                  href="#footer"
                   className="inline-block bg-red-600 text-white px-2 py-1 md:px-4 md:py-2 text-md rounded-md hover:bg-red-700 transition"
                 >
                   Get in touch

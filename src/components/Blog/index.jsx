@@ -8,7 +8,7 @@ const BlogPage = () => {
         <p className="text-white mt-4">
           <a href="/">Home</a>
           <span className="mx-1">&gt;</span>
-          <span className="text-red-500 font-bold">Blog Grid</span>
+          <span className="text-red-500 font-bold">Blogs</span>
         </p>
       </header>
       <main className="container mx-auto px-4 p-12">

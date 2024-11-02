@@ -17,6 +17,7 @@ import PrivacyPolicy from './components/Policy';
 import ServiceVertical from '/src/assets/bg-images/service-vertical.png';
 import TeamDetailed from './components/Team/TeamDetailed';
 import BlogPage from './components/Blog';
+import Blog1 from './components/Blog/BlogTMS';
 
 function App() {
   const location = useLocation();
@@ -100,7 +101,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/team/:name" element={<TeamDetailed />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<TeamDetailed />} />
+        <Route path="/blog/:id" element={<Blog1 />} />
       </Routes>
       <Outlet />
     </div>
