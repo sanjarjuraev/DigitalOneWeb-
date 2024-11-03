@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import './card.css';
+import { motion } from 'framer-motion';
 
 function BlogCard({ blog }) {
   const navigate = useNavigate();
@@ -7,14 +9,31 @@ function BlogCard({ blog }) {
   const handleReadMore = (id) => {
     navigate(`/blog/${id}`);
   };
-
+  const cardVariants = {
+    offscreen: {
+      y: 200,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'eseaIn',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm mx-auto">
-      <div className="relative">
+    <motion.div
+      variants={cardVariants}
+      className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm mx-auto"
+    >
+      <div className="relative w-[384px] h-[250px] flex items-center justify-center hover-zoom hover-shin box-content">
         <img
           src={blog.imageUrl}
           alt={blog.title}
-          className="w-full h-48 object-cover rounded-t-lg"
+          className="w-full  object-cover rounded-t-lg"
         />
         <div className="absolute -bottom-5 left-4 bg-white  text-white rounded px-1 py-1 text-sm font-semibold">
           <span className="block text-lg bg-red-600 text-center rounded">
@@ -43,7 +62,7 @@ function BlogCard({ blog }) {
           Read More &rarr;
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

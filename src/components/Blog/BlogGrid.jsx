@@ -1,18 +1,20 @@
 import BlogCard from './BlogCard';
-
+import blog_img1 from '/src/assets/bg-images/blog-1-1.png';
+import blog_img2 from '/src/assets/bg-images/blog-2-1.png';
 const blogs = [
   {
     id: 1,
-    imageUrl: 'https://via.placeholder.com/400x300',
-    title: 'We have recently started working on an ERP project for GlassPro',
+    imageUrl: blog_img1,
+    title:
+      'Unlock Efficiency and Growth with Our Transport Management System (TMS)',
     author: 'Admin',
-    category: 'ERP Project',
+    category: 'TMS Project',
     date: '21',
     month: 'Oct',
   },
   {
     id: 2,
-    imageUrl: 'https://via.placeholder.com/400x300',
+    imageUrl: blog_img2,
     title:
       'We have started developing e-commerce and WMS for Urgench Pharmacy.',
     author: 'Admin',
